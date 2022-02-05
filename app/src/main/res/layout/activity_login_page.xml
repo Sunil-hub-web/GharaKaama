@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage"
+    android:background="@drawable/background_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="@dimen/hundred_eighty"
+            android:layout_height="@dimen/hundred_eighty"
+            android:src="@drawable/ghara_kama"
+            android:layout_gravity="center">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile No"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:textSize="@dimen/edittextsize">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/edit_MobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty_five"
+            android:layout_marginBottom="@dimen/twenty"
+            android:drawablePadding="@dimen/twenty_five"
+            android:drawableLeft="@drawable/smartphone"
+            android:ems="10"
+            android:backgroundTint="@color/purple_700"
+            android:imeOptions="actionDone"
+            android:maxLength="10"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/twenty_size"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:textSize="@dimen/edittextsize">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/edit_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_MobileNumber"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginRight="@dimen/twenty_five"
+            android:layout_marginBottom="@dimen/twenty"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="@dimen/twenty_five"
+            android:ems="10"
+            android:backgroundTint="@color/purple_700"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/twenty_size"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_regular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:layout_marginRight="@dimen/twenty_five"
+            android:text="* Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_below="@+id/text_ForgotPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/twenty_five"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_bg"
+            android:text="Log In"
+            android:fontFamily="@font/roboto_bold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty_size"
+            ></Button>
+
+        <TextView
+            android:id="@+id/text_ForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password ?"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/edittextsize"
+            android:layout_gravity="center">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/login2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't Have an account?"
+                android:textColor="#938C8C"
+                android:textSize="@dimen/edittextsize"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold"/>
+
+            <TextView
+                android:id="@+id/text_RegisterNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/login2"
+                android:text=" Register Now"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/edittextsize"
+                android:fontFamily="@font/roboto_bold"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

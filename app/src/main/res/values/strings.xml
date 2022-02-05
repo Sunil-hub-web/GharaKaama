@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GharaKaama</string>
+
+    <string name="entername">Enter Valide Name</string>
+    <string name="entercontact">Enter Valide Contact No</string>
+    <string name="enteremail">Enter Valide Email id</string>
+    <string name="enterpassword">Enter Valide Password</string>
+</resources>

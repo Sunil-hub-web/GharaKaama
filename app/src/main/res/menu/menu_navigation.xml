@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home"/>
+
+    <item
+        android:id="@+id/queries"
+        android:title="Queries"
+        android:icon="@drawable/baseline_question_answer"/>
+    <item
+        android:id="@+id/support"
+        android:title="Support"
+        android:icon="@drawable/baseline_call"/>
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/baseline_ad_units"/>
+
+    <item
+        android:id="@+id/setting"
+        android:title="Setting"
+        android:icon="@drawable/baseline_settings"/>
+
+
+</menu>

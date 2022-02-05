@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressDetails"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ten">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Select"
+                android:layout_marginRight="@dimen/ten"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ShowDayhour"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginLeft="@dimen/ten"
+                android:text="Show"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/field"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/forty_five"
+                    android:layout_marginLeft="@dimen/twenty_five"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_marginBottom="@dimen/fifteen"
+                    android:background="@drawable/button_back1"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/two"
+                    android:paddingRight="@dimen/two"
+                    android:spinnerMode="dropdown"
+                    android:text="Please Select Your Area"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen" />
+
+                <Spinner
+                    android:id="@+id/sub_field"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/forty_five"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginRight="@dimen/twenty_five"
+                    android:layout_marginBottom="@dimen/fifteen"
+                    android:background="@drawable/button_back1"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/two"
+                    android:paddingRight="@dimen/two"
+                    android:spinnerMode="dropdown"
+                    android:text="Please Select Your Area"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="#25297A"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Mobile No"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_MobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="#25297A"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_EmailId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_below="@id/edit_MobileNumber"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:textColor="#0C0C0C"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_Address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_below="@id/edit_MobileNumber"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="#0C0C0C"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="locality"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_locality"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_below="@id/edit_MobileNumber"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="#0C0C0C"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Landmark"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_landmark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_below="@id/edit_MobileNumber"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="#0C0C0C"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:fontFamily="@font/roboto_bold"
+                android:text="State"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_State"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button_back1"
+                android:layout_below="@id/edit_MobileNumber"
+                android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/twenty"
+                android:paddingLeft="@dimen/fifteen"
+                android:ems="10"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="#0C0C0C"
+                android:textSize="@dimen/twenty_size"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btn_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_below="@+id/text_ForgotPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/twenty"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/twenty_size"></Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/lin_layout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hundred_twenty"
+            android:layout_margin="@dimen/ten"
+            app:cardCornerRadius="@dimen/ten"
+            app:cardElevation="@dimen/five">
+
+            <RelativeLayout
+                android:id="@+id/rel_splitac"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/category_Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sixty"
+                    android:layout_margin="@dimen/ten"
+                    android:src="@drawable/image1"
+                    android:scaleType="centerInside">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/text_CategoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/category_Image"
+                    android:layout_margin="@dimen/ten"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Split AC"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textsize"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <Button
+                    android:id="@+id/btn_subCategoryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"></Button>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
