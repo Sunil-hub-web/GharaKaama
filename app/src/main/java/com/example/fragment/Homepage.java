@@ -56,6 +56,8 @@ public class Homepage extends Fragment {
 
     public void getCategoryDetails(){
 
+        homepage.clear();
+
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Get CategoryDetails Please wait...");
         progressDialog.show();

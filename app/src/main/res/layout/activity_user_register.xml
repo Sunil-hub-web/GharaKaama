@@ -30,10 +30,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_light"
                 android:text="Name"
                 android:textColor="@color/white"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -42,28 +42,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginTop="@dimen/seven"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:backgroundTint="@color/purple_700"
+                android:backgroundTint="@color/white"
                 android:drawableLeft="@drawable/user"
                 android:drawablePadding="@dimen/twenty_five"
                 android:ems="10"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/fifteen"
                 android:imeOptions="actionDone"
                 android:inputType="text"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/twenty_size"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_light"
                 android:text="Mobile No"
                 android:textColor="@color/white"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -72,29 +72,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginTop="@dimen/seven"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:backgroundTint="@color/purple_700"
+                android:backgroundTint="@color/white"
                 android:drawableLeft="@drawable/smartphone"
                 android:drawablePadding="@dimen/twenty_five"
                 android:ems="10"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/fifteen"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:maxLength="10"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/twenty_size"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_light"
                 android:text="Email Id"
                 android:textColor="@color/white"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -104,28 +104,28 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginTop="@dimen/seven"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:backgroundTint="@color/purple_700"
+                android:backgroundTint="@color/white"
                 android:drawableLeft="@drawable/email_email"
                 android:drawablePadding="@dimen/twenty_five"
                 android:ems="10"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/fifteen"
                 android:imeOptions="actionDone"
                 android:inputType="textEmailAddress"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/twenty_size"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_light"
                 android:text="Password"
                 android:textColor="@color/white"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -135,28 +135,28 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginTop="@dimen/seven"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:backgroundTint="@color/purple_700"
+                android:backgroundTint="@color/white"
                 android:drawableLeft="@drawable/lock"
                 android:drawablePadding="@dimen/twenty_five"
                 android:ems="10"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/fifteen"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/twenty_size"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_light"
                 android:text="Confirm Password"
                 android:textColor="@color/white"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -166,28 +166,28 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginTop="@dimen/seven"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:backgroundTint="@color/purple_700"
+                android:backgroundTint="@color/white"
                 android:drawableLeft="@drawable/lock"
                 android:drawablePadding="@dimen/twenty_five"
                 android:ems="10"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/fifteen"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/twenty_size"
                 android:textStyle="normal" />
 
-            <TextView
+           <!-- <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:text="* Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp" />
+                android:textSize="13sp" />-->
 
             <Button
                 android:id="@+id/btn_signup"
@@ -199,9 +199,9 @@
                 android:layout_margin="@dimen/twenty"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_bg"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_light"
                 android:text="Sign Up"
-                android:textAllCaps="false"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="@dimen/twenty_size"></Button>
 
@@ -219,7 +219,7 @@
                     android:fontFamily="@font/roboto_bold"
                     android:text="Already have an account?"
                     android:textColor="#D6D0D0"
-                    android:textSize="@dimen/edittextsize"
+                    android:textSize="@dimen/textsize"
                     android:textStyle="bold" />
 
                 <TextView
@@ -227,10 +227,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/login2"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/roboto_light"
                     android:text=" Sign In"
                     android:textColor="#FFFFFF"
-                    android:textSize="@dimen/edittextsize" />
+                    android:textSize="@dimen/textsize" />
 
 
             </RelativeLayout>

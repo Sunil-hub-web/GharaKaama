@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -71,10 +75,6 @@ public class ChangePassword_Fragment extends Fragment {
                 }else if(TextUtils.isEmpty(edit_ConfirmPassword.getText())){
 
                     edit_ConfirmPassword.setError("Fill The Details");
-
-                }else if(!isValidPassword(edit_password.getText().toString().trim())){
-
-                    edit_password.setError("Enter The Valid Password");
 
                 }else if(edit_password.getText().toString().trim().equals(edit_ConfirmPassword.getText().toString().trim())){
 
@@ -127,8 +127,35 @@ public class ChangePassword_Fragment extends Fragment {
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
-                error.printStackTrace();
-                Toast.makeText(getActivity(), ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+                if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+
+                    Toast.makeText(getActivity(), "Please check Internet Connection", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    Log.d("successresponceVolley", "" + error.networkResponse);
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.data != null) {
+                        try {
+                            String jError = new String(networkResponse.data);
+                            JSONObject jsonError = new JSONObject(jError);
+//                            if (error.networkResponse.statusCode == 400) {
+                            String data = jsonError.getString("msg");
+                            Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT).show();
+
+//                            } else if (error.networkResponse.statusCode == 404) {
+//                                JSONArray data = jsonError.getJSONArray("msg");
+//                                JSONObject jsonitemChild = data.getJSONObject(0);
+//                                String ms = jsonitemChild.toString();
+//                                Toast.makeText(RegisterActivity.this, ms, Toast.LENGTH_SHORT).show();
+//
+//                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.d("successresponceVolley", "" + e);
+                        }
+                    }
+                }
 
             }
         }){

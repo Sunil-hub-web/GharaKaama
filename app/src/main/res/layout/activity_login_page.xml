@@ -26,9 +26,9 @@
             android:layout_height="wrap_content"
             android:text="Mobile No"
             android:textColor="@color/white"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_light"
             android:layout_marginLeft="@dimen/twenty_five"
-            android:textSize="@dimen/edittextsize">
+            android:textSize="@dimen/textsize">
 
         </TextView>
 
@@ -37,13 +37,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/twenty_five"
-            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginTop="@dimen/seven"
             android:layout_marginRight="@dimen/twenty_five"
             android:layout_marginBottom="@dimen/twenty"
             android:drawablePadding="@dimen/twenty_five"
             android:drawableLeft="@drawable/smartphone"
             android:ems="10"
-            android:backgroundTint="@color/purple_700"
+            android:backgroundTint="@color/white"
             android:imeOptions="actionDone"
             android:maxLength="10"
             android:inputType="number"
@@ -57,9 +57,9 @@
             android:layout_height="wrap_content"
             android:text="Password"
             android:textColor="@color/white"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_light"
             android:layout_marginLeft="@dimen/twenty_five"
-            android:textSize="@dimen/edittextsize">
+            android:textSize="@dimen/textsize">
 
         </TextView>
 
@@ -69,13 +69,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/edit_MobileNumber"
             android:layout_marginLeft="@dimen/twenty_five"
-            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginTop="@dimen/seven"
             android:layout_marginRight="@dimen/twenty_five"
             android:layout_marginBottom="@dimen/twenty"
             android:drawableLeft="@drawable/lock"
             android:drawablePadding="@dimen/twenty_five"
             android:ems="10"
-            android:backgroundTint="@color/purple_700"
+            android:backgroundTint="@color/white"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:textColor="#FFFFFF"
@@ -103,11 +103,10 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_bg"
             android:text="Log In"
-            android:fontFamily="@font/roboto_bold"
-            android:textAllCaps="false"
+            android:fontFamily="@font/roboto_light"
+            android:textAllCaps="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/twenty_size"
-            ></Button>
+            android:textSize="@dimen/twenty_size"></Button>
 
         <TextView
             android:id="@+id/text_ForgotPassword"
@@ -115,8 +114,8 @@
             android:layout_height="wrap_content"
             android:text="Forgot Password ?"
             android:textColor="@color/white"
-            android:fontFamily="@font/roboto_bold"
-            android:textSize="@dimen/edittextsize"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="@dimen/textsize"
             android:layout_gravity="center">
 
         </TextView>
@@ -134,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:text="Don't Have an account?"
                 android:textColor="#938C8C"
-                android:textSize="@dimen/edittextsize"
+                android:textSize="@dimen/textsize"
                 android:textStyle="bold"
                 android:fontFamily="@font/roboto_bold"/>
 
@@ -145,8 +144,8 @@
                 android:layout_toRightOf="@id/login2"
                 android:text=" Register Now"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/edittextsize"
-                android:fontFamily="@font/roboto_bold"/>
+                android:textSize="@dimen/textsize"
+                android:fontFamily="@font/roboto_light"/>
 
 
         </RelativeLayout>

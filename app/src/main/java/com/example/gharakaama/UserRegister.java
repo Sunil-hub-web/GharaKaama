@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +15,12 @@ import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.NetworkResponse;
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -57,8 +61,8 @@ public class UserRegister extends AppCompatActivity {
         awesomeValidation.addValidation (UserRegister.this,R.id.edit_fullname,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
         awesomeValidation.addValidation (UserRegister.this,R.id.edit_MobileNumber,"^[0-9]{10}$",R.string.entercontact);
         awesomeValidation.addValidation (UserRegister.this,R.id.edit_EmailId, Patterns.EMAIL_ADDRESS,R.string.enteremail);
-        awesomeValidation.addValidation (UserRegister.this,R.id.edit_Password,"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$",R.string.enterpassword);
-        awesomeValidation.addValidation (UserRegister.this,R.id.edit_ConfirmPassword,"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$",R.string.enterpassword);
+        //awesomeValidation.addValidation (UserRegister.this,R.id.edit_Password,"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$",R.string.enterpassword);
+        //awesomeValidation.addValidation (UserRegister.this,R.id.edit_ConfirmPassword,"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$",R.string.enterpassword);
 
 
         text_signin.setOnClickListener(new View.OnClickListener() {
@@ -113,9 +117,11 @@ public class UserRegister extends AppCompatActivity {
                 progressDialog.dismiss();
 
                 try {
+
                     JSONObject jsonObject = new JSONObject(response);
 
                     String success = jsonObject.getString("success");
+
                     if(success.equals("true")){
 
                         String msg = jsonObject.getString("msg");
@@ -130,6 +136,7 @@ public class UserRegister extends AppCompatActivity {
                         Toast.makeText(UserRegister.this, msg, Toast.LENGTH_SHORT).show();
 
                     }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
 
@@ -142,8 +149,38 @@ public class UserRegister extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
-                error.printStackTrace();
+                /*error.printStackTrace();
                 Toast.makeText(UserRegister.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+*/
+                if (error instanceof TimeoutError || error instanceof NoConnectionError) {
+
+                    Toast.makeText(UserRegister.this, "Please check Internet Connection", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    Log.d("successresponceVolley", "" + error.networkResponse);
+                    NetworkResponse networkResponse = error.networkResponse;
+                    if (networkResponse != null && networkResponse.data != null) {
+                        try {
+                            String jError = new String(networkResponse.data);
+                            JSONObject jsonError = new JSONObject(jError);
+//                            if (error.networkResponse.statusCode == 400) {
+                            String data = jsonError.getString("msg");
+                            Toast.makeText(UserRegister.this, data, Toast.LENGTH_SHORT).show();
+
+//                            } else if (error.networkResponse.statusCode == 404) {
+//                                JSONArray data = jsonError.getJSONArray("msg");
+//                                JSONObject jsonitemChild = data.getJSONObject(0);
+//                                String ms = jsonitemChild.toString();
+//                                Toast.makeText(RegisterActivity.this, ms, Toast.LENGTH_SHORT).show();
+//
+//                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Log.d("successresponceVolley", "" + e);
+                        }
+                    }
+                }
             }
         }){
 
@@ -163,7 +200,6 @@ public class UserRegister extends AppCompatActivity {
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(30000,1,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         RequestQueue requestQueue = Volley.newRequestQueue(UserRegister.this);
         requestQueue.add(stringRequest);
-
 
     }
 

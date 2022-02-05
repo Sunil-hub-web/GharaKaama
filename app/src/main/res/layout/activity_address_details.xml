@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddressDetails"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".AddressDetails">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,60 +15,60 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/ten">
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Select"
-                android:layout_marginRight="@dimen/ten"
-                android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/twenty_five"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Select"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize">
 
-            </TextView>
+                </TextView>
 
-            <TextView
-                android:id="@+id/ShowDayhour"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/roboto_bold"
-                android:layout_marginRight="@dimen/twenty_five"
-                android:layout_marginLeft="@dimen/ten"
-                android:text="Show"
-                android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                <TextView
+                    android:id="@+id/ShowDayhour"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/twenty_five"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Show"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize">
 
-            </TextView>
+                </TextView>
 
-        </LinearLayout>
+            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <Spinner
                     android:id="@+id/field"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="@dimen/forty_five"
                     android:layout_marginLeft="@dimen/twenty_five"
                     android:layout_marginTop="@dimen/ten"
                     android:layout_marginRight="@dimen/ten"
                     android:layout_marginBottom="@dimen/fifteen"
+                    android:layout_weight="1"
                     android:background="@drawable/button_back1"
                     android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
                     android:gravity="center_vertical"
@@ -82,12 +82,12 @@
                 <Spinner
                     android:id="@+id/sub_field"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="@dimen/forty_five"
                     android:layout_marginLeft="@dimen/ten"
                     android:layout_marginTop="@dimen/ten"
                     android:layout_marginRight="@dimen/twenty_five"
                     android:layout_marginBottom="@dimen/fifteen"
+                    android:layout_weight="1"
                     android:background="@drawable/button_back1"
                     android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
                     android:gravity="center_vertical"
@@ -104,10 +104,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Name"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -115,28 +115,28 @@
                 android:id="@+id/edit_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#25297A"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Mobile No"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -144,28 +144,28 @@
                 android:id="@+id/edit_MobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="number"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#25297A"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Email"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -173,29 +173,29 @@
                 android:id="@+id/edit_EmailId"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Address"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -203,29 +203,29 @@
                 android:id="@+id/edit_Address"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="locality"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -233,29 +233,29 @@
                 android:id="@+id/edit_locality"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Landmark"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -263,29 +263,29 @@
                 android:id="@+id/edit_landmark"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="State"
                 android:textColor="@color/black"
-                android:textSize="@dimen/edittextsize">
+                android:textSize="@dimen/textsize">
 
             </TextView>
 
@@ -293,19 +293,19 @@
                 android:id="@+id/edit_State"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/fifty"
-                android:layout_marginTop="@dimen/ten"
-                android:background="@drawable/button_back1"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
+                android:layout_marginTop="@dimen/ten"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/twenty"
-                android:paddingLeft="@dimen/fifteen"
+                android:background="@drawable/button_back1"
                 android:ems="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
+                android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
-                android:textSize="@dimen/twenty_size"
+                android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
             <Button
@@ -318,11 +318,11 @@
                 android:layout_margin="@dimen/twenty"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/button_bg"
-                android:fontFamily="@font/roboto_bold"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Submit"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/twenty_size"></Button>
+                android:textSize="@dimen/fifteen"></Button>
 
         </LinearLayout>
 
