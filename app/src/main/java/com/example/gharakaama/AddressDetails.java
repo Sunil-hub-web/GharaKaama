@@ -45,7 +45,7 @@ public class AddressDetails extends AppCompatActivity {
             str_categoryId,str_SubCategoryId,fieldselected,str_Selected1,str_Selected2,ServiceTypeDesc,date,
             time,str_address;
     Button btn_Submit;
-    String[] fieldname = {"--Select--", "Miner", "Mazer", "Full"};
+    String[] fieldname = {"--Select--", "Major", "Minor", "Full"};
     String[] fieldnamehour = {"--Select hour--", "1 hour", "2 hour", "3 hour","4 hour","5 hour","6 hour",
                               "7 hour","8 hour","9 hour", "10 hour","11 hour","12 hour","13 hour","14 hour",
                               "15 hour","16 hour","17 hour","18 hour","19 hour","20 hour","21 hour","22 hour",
@@ -99,10 +99,10 @@ public class AddressDetails extends AppCompatActivity {
         awesomeValidation = new AwesomeValidation (ValidationStyle.BASIC);
 
         awesomeValidation.addValidation (AddressDetails.this,R.id.edit_fullname,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
-        awesomeValidation.addValidation (AddressDetails.this,R.id.edit_Address,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
-        awesomeValidation.addValidation (AddressDetails.this,R.id.edit_locality,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
-        awesomeValidation.addValidation (AddressDetails.this,R.id.edit_landmark,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
-        awesomeValidation.addValidation (AddressDetails.this,R.id.edit_State,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
+       // awesomeValidation.addValidation (AddressDetails.this,R.id.edit_Address,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
+        //awesomeValidation.addValidation (AddressDetails.this,R.id.edit_locality,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
+        //awesomeValidation.addValidation (AddressDetails.this,R.id.edit_landmark,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
+        //awesomeValidation.addValidation (AddressDetails.this,R.id.edit_State,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
         awesomeValidation.addValidation (AddressDetails.this,R.id.edit_MobileNumber,"^[0-9]{10}$",R.string.entercontact);
         awesomeValidation.addValidation (AddressDetails.this,R.id.edit_EmailId, Patterns.EMAIL_ADDRESS,R.string.enteremail);
 
@@ -115,7 +115,7 @@ public class AddressDetails extends AppCompatActivity {
 
 
 
-                if(fieldselected.equals("Miner")){
+                if(fieldselected.equals("Minor")){
 
                     ArrayAdapter WorkingFieldhour = new ArrayAdapter(AddressDetails.this, R.layout.spinneritem, fieldnamehour);
                     WorkingFieldhour.setDropDownViewResource(R.layout.spinnerdropdownitem);
@@ -127,8 +127,9 @@ public class AddressDetails extends AppCompatActivity {
                     ShowDayhour.setVisibility(View.VISIBLE);
                     sub_field.setVisibility(View.VISIBLE);
 
+                    str_Selected2 = sub_field.getSelectedItem().toString();
 
-                }else if(fieldselected.equals("Mazer")){
+                }else if(fieldselected.equals("Major")){
 
                     ArrayAdapter WorkingFielddays = new ArrayAdapter(AddressDetails.this, R.layout.spinneritem, fieldnamedays);
                     WorkingFielddays.setDropDownViewResource(R.layout.spinnerdropdownitem);
@@ -146,6 +147,8 @@ public class AddressDetails extends AppCompatActivity {
 
                     ShowDayhour.setVisibility(View.GONE);
                     sub_field.setVisibility(View.GONE);
+
+                    str_Selected2 = "";
 
                 }
             }
@@ -166,23 +169,49 @@ public class AddressDetails extends AppCompatActivity {
 
                 if(awesomeValidation.validate()){
 
-
-                    str_fullname = edit_fullname.getText().toString().trim();
-                    str_MobileNumber = edit_MobileNumber.getText().toString().trim();
-                    str_EmailId = edit_EmailId.getText().toString().trim();
-                    str_Address = edit_Address.getText().toString().trim();
-                    str_locality = edit_locality.getText().toString().trim();
-                    str_landmark = edit_landmark.getText().toString().trim();
-                    str_State = edit_State.getText().toString().trim();
-
-                    str_Selected2 = sub_field.getSelectedItem().toString();
                     str_Selected1 = field.getSelectedItem().toString();
-                    ServiceTypeDesc = str_Selected1+"_"+str_Selected2;
 
-                    str_address = str_fullname+","+str_EmailId+","+str_Address;
+                    if(str_Selected1.equals("Full")){
 
-                    placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
-                            date,time,str_address,str_locality,str_landmark,str_State,str_MobileNumber);
+                        str_Selected2 = "";
+
+                        str_fullname = edit_fullname.getText().toString().trim();
+                        str_MobileNumber = edit_MobileNumber.getText().toString().trim();
+                        str_EmailId = edit_EmailId.getText().toString().trim();
+                        str_Address = edit_Address.getText().toString().trim();
+                        str_locality = edit_locality.getText().toString().trim();
+                        str_landmark = edit_landmark.getText().toString().trim();
+                        str_State = edit_State.getText().toString().trim();
+
+                        str_Selected1 = field.getSelectedItem().toString();
+                        ServiceTypeDesc = str_Selected1;
+
+                        str_address = str_fullname+","+str_EmailId+","+str_Address;
+
+                        placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
+                                date,time,str_address,str_locality,str_landmark,str_State,str_MobileNumber);
+
+                    }else{
+
+                        str_fullname = edit_fullname.getText().toString().trim();
+                        str_MobileNumber = edit_MobileNumber.getText().toString().trim();
+                        str_EmailId = edit_EmailId.getText().toString().trim();
+                        str_Address = edit_Address.getText().toString().trim();
+                        str_locality = edit_locality.getText().toString().trim();
+                        str_landmark = edit_landmark.getText().toString().trim();
+                        str_State = edit_State.getText().toString().trim();
+
+                        str_Selected2 = sub_field.getSelectedItem().toString();
+                        str_Selected1 = field.getSelectedItem().toString();
+                        ServiceTypeDesc = str_Selected1+"/"+str_Selected2;
+
+                        str_address = str_fullname+","+str_EmailId+","+str_Address;
+
+                        placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
+                                date,time,str_address,str_locality,str_landmark,str_State,str_MobileNumber);
+                    }
+
+
 
                 }else{
 

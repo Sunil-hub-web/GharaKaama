@@ -65,6 +65,8 @@ public class BookingHistory extends Fragment {
 
     public void getOrderHistory(String userId){
 
+        booking.clear();
+
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Get Order Details Please wait...");
         progressDialog.show();

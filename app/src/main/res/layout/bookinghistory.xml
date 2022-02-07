@@ -25,13 +25,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
-                android:layout_margin="@dimen/ten">
+                android:layout_margin="@dimen/five">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="book_id"
+                    android:text="Book Id"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -58,13 +58,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
-                android:layout_margin="@dimen/ten">
+                android:layout_margin="@dimen/five">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="service_catagory"
+                    android:text="Service Catagory"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -91,13 +91,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
-                android:layout_margin="@dimen/ten">
+                android:layout_margin="@dimen/five">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="service_subcatagory"
+                    android:text="Service SubCatagory"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -124,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
-                android:layout_margin="@dimen/ten">
+                android:layout_margin="@dimen/five">
 
                 <TextView
                     android:layout_width="0dp"
@@ -157,7 +157,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
-                android:layout_margin="@dimen/ten">
+                android:layout_margin="@dimen/five">
 
                 <TextView
                     android:layout_width="0dp"

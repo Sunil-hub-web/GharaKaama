@@ -52,7 +52,7 @@ public class Homepageadapter extends RecyclerView.Adapter<Homepageadapter.ViewHo
 
         holder.text_CategoryName.setText(hom_page.getCate_name());
 
-       // Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
+        Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
 
         holder.btn_subCategoryName.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -65,6 +65,8 @@ public class Subcategory extends Fragment {
 
     public void getSubCategoryDetails(String categoryId){
 
+        subcategory.clear();
+
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Get SubCategoryDetails Please wait...");
         progressDialog.show();
