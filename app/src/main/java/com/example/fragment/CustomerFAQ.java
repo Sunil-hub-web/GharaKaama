@@ -15,27 +15,30 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.gharakaama.MainActivity;
 import com.example.gharakaama.R;
 
-public class Support extends Fragment {
+public class CustomerFAQ extends Fragment {
+
+    String text = " Frequently Asked Questions";
 
     ImageView image_Logo,image_back;
-    TextView welcome;
+    TextView welcome,text_details;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
+    public View onCreateView(@NonNull  LayoutInflater inflater,
                              @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+                             @Nullable  Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.support_fragment, container, false);
+        View view = inflater.inflate(R.layout.customerfaq,container,false);
 
         image_Logo = view.findViewById(R.id.image_Logo);
         image_back = view.findViewById(R.id.image_back);
         welcome = view.findViewById(R.id.welcome);
+        text_details = view.findViewById(R.id.text_details);
 
         image_Logo.setVisibility(View.GONE);
         welcome.setVisibility(View.VISIBLE);
         image_back.setVisibility(View.VISIBLE);
-        welcome.setText("Customer Support");
+        welcome.setText(text);
 
         image_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,9 +51,13 @@ public class Support extends Fragment {
                 Homepage homepage = new Homepage();
                 ft.replace(R.id.framLayout, homepage);
                 ft.commit();
+
                 MainActivity.bottomNavigation.setSelectedItemId(R.id.home);
             }
         });
+
+
+
 
         return view;
     }

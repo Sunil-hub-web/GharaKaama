@@ -10,10 +10,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fragment.AboutUs;
 import com.example.fragment.BookingHistory;
+import com.example.fragment.CustomerFAQ;
 import com.example.fragment.Homepage;
 import com.example.fragment.Queries;
 import com.example.fragment.SettingPage;
@@ -22,10 +25,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    BottomNavigationView bottomNavigation;
+    public static BottomNavigationView bottomNavigation;
     Homepage test;
     private Boolean exit = false;
     public static FragmentManager fragmentManager;
+    ImageView image_Logo,image_back;
+    TextView welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigation = findViewById(R.id.bottomNavigation);
+        welcome = findViewById(R.id.welcome);
+        image_Logo = findViewById(R.id.image_Logo);
+        image_back = findViewById(R.id.image_back);
+
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,new Homepage(),"HomeFragment").commit();
 
@@ -67,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.queries:
 
-                        selectedFragment = new BookingHistory();
+                        selectedFragment = new CustomerFAQ();
 
                         break;
 

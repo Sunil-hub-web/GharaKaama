@@ -12,12 +12,38 @@
         android:elevation="@dimen/five">
 
         <ImageView
+            android:id="@+id/image_Logo"
             android:layout_width="@dimen/eighty"
             android:layout_height="@dimen/sixty"
             android:layout_centerHorizontal="true"
             android:src="@drawable/ghara_kama">
 
         </ImageView>
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="@dimen/twenty"
+            android:layout_height="@dimen/twenty"
+            android:src="@drawable/arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:visibility="visible">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/thirty"
+            android:text="Welcome Back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty_size"
+            android:fontFamily="@font/roboto_medium"
+            android:visibility="gone">
+
+        </TextView>
 
     </RelativeLayout>
 

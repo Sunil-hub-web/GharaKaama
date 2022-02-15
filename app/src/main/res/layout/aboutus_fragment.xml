@@ -3,17 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+     <include layout="@layout/toolbar"
+       android:id="@+id/include"></include>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/fifty">
+        android:layout_marginTop="@dimen/fifty"
+        android:layout_below="@+id/include">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
-            android:text="About Us"
+            android:text="About GharaKaama"
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/twenty_five">
@@ -23,10 +27,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Complete service solution for your Home and Office."
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/ten"
+            android:textSize="@dimen/edittextsize"
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
             android:layout_marginTop="@dimen/twenty"
-            android:text="We are at Brahma, provides the best house hold services as per your need. We office all possible services required for any house hold. We also offer facilitate services for House Owners and Tenants asper their need."
-            android:layout_gravity="center"
+            android:gravity="center"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="5dp"
+            android:lineSpacingMultiplier="1"
             android:textColor="@color/black"
             android:layout_marginLeft="@dimen/fifteen"
             android:layout_marginRight="@dimen/fifteen"

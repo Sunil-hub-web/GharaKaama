@@ -7,10 +7,15 @@
     android:background="@color/white"
     tools:context=".AddressDetails">
 
+    <include layout="@layout/toolbar"
+        android:id="@+id/include"></include>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        android:layout_below="@id/include"
+        android:layout_marginTop="@dimen/five">
 
         <LinearLayout
             android:layout_width="match_parent"

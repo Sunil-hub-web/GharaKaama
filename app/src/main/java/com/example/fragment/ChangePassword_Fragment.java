@@ -1,11 +1,16 @@
 package com.example.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -14,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -47,6 +53,7 @@ public class ChangePassword_Fragment extends Fragment {
     EditText edit_password,edit_ConfirmPassword;
     String str_password,str_ConfirmPassword,str_UserId,oldPassword;
     Button btn_ChangePassword;
+    boolean passwordVisiable;
 
 
     @Nullable
@@ -85,6 +92,45 @@ public class ChangePassword_Fragment extends Fragment {
 
                     edit_ConfirmPassword.setError("Password not match");
                 }
+            }
+        });
+
+        edit_password.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                final int Right = 2;
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+
+                    if (event.getRawX() >= edit_password.getRight() - edit_password.getCompoundDrawables()[Right].getBounds().width()) {
+
+                        int selection = edit_password.getSelectionEnd();
+                        if (passwordVisiable) {
+
+                            //set Drawable Image here
+                            edit_password.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
+                            edit_password.setCompoundDrawablePadding(20);
+                            // for show Password
+                            edit_password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisiable = false;
+
+                        } else {
+
+                            //set Drawable Image here
+                            edit_password.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
+                            edit_password.setCompoundDrawablePadding(20);
+                            // for show Password
+                            edit_password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisiable = true;
+                        }
+
+                        edit_password.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
             }
         });
 

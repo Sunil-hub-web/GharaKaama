@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +28,7 @@ import com.example.adapter.BookingHistoryAdapter;
 import com.example.extra.AppUrl;
 import com.example.extra.SharedPrefManager;
 import com.example.gharakaama.LoginPage;
+import com.example.gharakaama.MainActivity;
 import com.example.gharakaama.R;
 import com.example.modelclass.BookingDetails_ModelClass;
 
@@ -46,6 +50,9 @@ public class BookingHistory extends Fragment {
 
     String userId;
 
+    ImageView image_Logo,image_back;
+    TextView welcome;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull  LayoutInflater inflater,
@@ -55,6 +62,29 @@ public class BookingHistory extends Fragment {
         View view = inflater.inflate(R.layout.bookinghistory_fragment,container,false);
 
         recyclerBookingHistory = view.findViewById(R.id.recyclerBookingHistory);
+
+        image_Logo = view.findViewById(R.id.image_Logo);
+        image_back = view.findViewById(R.id.image_back);
+        welcome = view.findViewById(R.id.welcome);
+
+        image_Logo.setVisibility(View.GONE);
+        welcome.setVisibility(View.VISIBLE);
+        image_back.setVisibility(View.VISIBLE);
+        welcome.setText("Booking History");
+        image_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                welcome.setVisibility(View.INVISIBLE);
+                image_back.setVisibility(View.INVISIBLE);
+                image_Logo.setVisibility(View.VISIBLE);
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Homepage homepage = new Homepage();
+                ft.replace(R.id.framLayout, homepage);
+                ft.commit();
+                MainActivity.bottomNavigation.setSelectedItemId(R.id.home);
+            }
+        });
 
         userId = SharedPrefManager.getInstance(getActivity()).getUser().getUserid();
 

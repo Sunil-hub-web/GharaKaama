@@ -3,11 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/toolbar"
+        android:id="@+id/include"></include>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/hundred">
+        android:layout_marginTop="@dimen/hundred"
+        android:layout_below="@id/include">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,7 +28,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
-            android:text="+91-9976553310"
+            android:text=" +91 8076547299"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_five">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Email Id"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/twenty"
+            android:textSize="@dimen/twenty_five">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="  info@gharakaama.com"
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/twenty_five">

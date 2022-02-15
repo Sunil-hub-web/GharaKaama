@@ -78,19 +78,20 @@
             android:backgroundTint="@color/white"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
+            android:drawableRight="@drawable/baseline_visibility_off"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/fifteen"
             android:textStyle="normal"
             android:fontFamily="@font/roboto_regular"/>
 
-        <TextView
+       <!-- <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/twenty_five"
             android:layout_marginRight="@dimen/twenty_five"
             android:text="* Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
             android:textColor="#FFFFFF"
-            android:textSize="13sp" />
+            android:textSize="13sp" />-->
 
         <Button
             android:id="@+id/btn_signin"

@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +26,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.adapter.Homepageadapter;
 import com.example.extra.AppUrl;
 import com.example.gharakaama.LoginPage;
+import com.example.gharakaama.MainActivity;
 import com.example.gharakaama.R;
 import com.example.modelclass.Home_ModelClass;
 
@@ -39,6 +43,9 @@ public class Homepage extends Fragment {
     Homepageadapter homepageadapter;
     ArrayList<Home_ModelClass> homepage = new ArrayList<>();
 
+    ImageView image_Logo,image_back;
+    TextView welcome;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -48,6 +55,16 @@ public class Homepage extends Fragment {
         View view = inflater.inflate(R.layout.home_fragment,container,false);
 
         recyclerCategory = view.findViewById(R.id.recyclerCategory);
+
+        image_Logo = view.findViewById(R.id.image_Logo);
+        image_back = view.findViewById(R.id.image_back);
+        welcome = view.findViewById(R.id.welcome);
+
+        welcome.setVisibility(View.GONE);
+        image_back.setVisibility(View.GONE);
+        image_Logo.setVisibility(View.VISIBLE);
+
+        //MainActivity.bottomNavigation.setSelectedItemId(R.id.home);
 
         getCategoryDetails();
 

@@ -1,12 +1,18 @@
 package com.example.gharakaama;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +47,7 @@ public class UserRegister extends AppCompatActivity {
     EditText edit_fullname,edit_MobileNumber,edit_EmailId,edit_Password,edit_ConfirmPassword;
     String str_fullname,str_MobileNumber,str_EmailId,str_Password,str_ConfirmPassword;
     private AwesomeValidation awesomeValidation;
+    boolean passwordVisiable;
 
 
     @Override
@@ -99,6 +106,84 @@ public class UserRegister extends AppCompatActivity {
                     Toast.makeText(UserRegister.this, "Enter a valide data", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        edit_Password.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                final int Right = 2;
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+
+                    if (event.getRawX() >= edit_Password.getRight() - edit_Password.getCompoundDrawables()[Right].getBounds().width()) {
+
+                        int selection = edit_Password.getSelectionEnd();
+                        if (passwordVisiable) {
+
+                            //set Drawable Image here
+                            edit_Password.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lock, 0, R.drawable.baseline_visibility_off, 0);
+                            edit_Password.setCompoundDrawablePadding(25);
+                            // for show Password
+                            edit_Password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisiable = false;
+
+                        } else {
+
+                            //set Drawable Image here
+                            edit_Password.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lock, 0, R.drawable.baseline_visibility, 0);
+                            edit_Password.setCompoundDrawablePadding(25);
+                            // for show Password
+                            edit_Password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisiable = true;
+                        }
+
+                        edit_Password.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+        edit_ConfirmPassword.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                final int Right = 2;
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+
+                    if (event.getRawX() >= edit_ConfirmPassword.getRight() - edit_ConfirmPassword.getCompoundDrawables()[Right].getBounds().width()) {
+
+                        int selection = edit_ConfirmPassword.getSelectionEnd();
+                        if (passwordVisiable) {
+
+                            //set Drawable Image here
+                            edit_ConfirmPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lock, 0, R.drawable.baseline_visibility_off, 0);
+                            edit_ConfirmPassword.setCompoundDrawablePadding(25);
+                            // for show Password
+                            edit_ConfirmPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisiable = false;
+
+                        } else {
+
+                            //set Drawable Image here
+                            edit_ConfirmPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lock, 0, R.drawable.baseline_visibility, 0);
+                            edit_ConfirmPassword.setCompoundDrawablePadding(25);
+                            // for show Password
+                            edit_ConfirmPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisiable = true;
+                        }
+
+                        edit_ConfirmPassword.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
             }
         });
     }

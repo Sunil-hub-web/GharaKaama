@@ -50,9 +50,19 @@ public class Homepageadapter extends RecyclerView.Adapter<Homepageadapter.ViewHo
 
         Home_ModelClass hom_page = home.get(position);
 
-        holder.text_CategoryName.setText(hom_page.getCate_name());
+        if(hom_page.getCate_image().equals("")){
 
-        Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
+            holder.text_CategoryName.setText(hom_page.getCate_name());
+
+        }else{
+
+            holder.text_CategoryName.setText(hom_page.getCate_name());
+            Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
+        }
+
+
+
+
 
         holder.btn_subCategoryName.setOnClickListener(new View.OnClickListener() {
             @Override

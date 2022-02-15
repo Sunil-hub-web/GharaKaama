@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/include"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/fifteen"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:fontFamily="@font/roboto_medium"
+                android:text="1.Why Tuni's GharaKaama?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_size">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:text="One stop solution for all your Home Service requirements."
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:text="We are committed to deliver best Customer experience."
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:text="We provide specific solutions for our every Customers."
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="1"
+                android:fontFamily="@font/roboto_light"
+                android:text="For the first time, we are asking our customers to provide an estimate cost for the service they have request for, which is making us different from others."
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:fontFamily="@font/roboto_medium"
+                android:text="2.What are the Services You Provide?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_size">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawablePadding="@dimen/fifteen"
+                android:layout_marginRight="@dimen/ten"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="1"
+                android:fontFamily="@font/roboto_light"
+                android:text="We are providing services related to maintenance of your home and upkeep of your premises so that you can focus on your business. Skilled Professionals like plumber, electrician, home appliance repair, Gardening, house cleaning etc. will available at your door step on a click away."
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten"
+                android:fontFamily="@font/roboto_medium"
+                android:text="3.How does it work?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty_size">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawablePadding="@dimen/fifteen"
+                android:layout_marginRight="@dimen/ten"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="1"
+                android:fontFamily="@font/roboto_light"
+                android:text="Once customer installed our application, customer has to go to respective menu in our app for their requirement and raise a request. if any of requirement is not available in our app customer can connect us with email or phone call. Once request received by us, our personal will visit the site for a preliminary assessment of work and will provide you an estimate of work. We have categorized the work in three categories'."
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:text="Minor work (Shall be billed in hourly rate)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:text="Major Work (Shall be billed as daily wages)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/twenty_five"
+                android:drawableLeft="@drawable/ic_baseline_brightness_1_24"
+                android:drawablePadding="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:text="Contract basis services (It is based on mutually agreed fee based on Estimate)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edittextsize"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

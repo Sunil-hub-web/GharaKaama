@@ -13,9 +13,9 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/hundred_twenty"
-            android:layout_margin="@dimen/ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five"
             app:cardCornerRadius="@dimen/ten"
             app:cardElevation="@dimen/five">
 
@@ -29,14 +29,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/sixty"
                     android:layout_margin="@dimen/ten"
-                    android:src="@drawable/image1"
+                    android:src="@drawable/default_placeholder"
                     android:scaleType="centerInside">
 
                 </ImageView>
 
                 <TextView
                     android:id="@+id/text_CategoryName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/category_Image"
                     android:layout_margin="@dimen/ten"
@@ -45,14 +45,15 @@
                     android:layout_centerHorizontal="true"
                     android:textColor="#000000"
                     android:textSize="@dimen/textsize"
-                    android:textStyle="bold">
+                    android:textStyle="bold"
+                    android:gravity="center">
 
                 </TextView>
 
                 <Button
                     android:id="@+id/btn_subCategoryName"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"></Button>
 
             </RelativeLayout>

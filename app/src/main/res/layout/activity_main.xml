@@ -7,14 +7,14 @@
     tools:context=".MainActivity">
 
     <include layout="@layout/toolbar"
-        android:id="@+id/include"></include>
+        android:id="@+id/include"
+        android:visibility="gone"></include>
 
    <FrameLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:layout_above="@id/bottomNavigation"
-       android:id="@+id/framLayout"
-       android:layout_below="@+id/include">
+       android:id="@+id/framLayout">
 
    </FrameLayout>
 

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.extra.AppUrl;
 import com.example.extra.SharedPrefManager;
 import com.example.gharakaama.LoginPage;
+import com.example.gharakaama.MainActivity;
 import com.example.gharakaama.R;
 import com.example.gharakaama.UserRegister;
 
@@ -42,7 +44,8 @@ public class SettingPage extends Fragment {
 
     TextView nav_ChangePassword,nav_ChangeAddress,nav_Name,nav_mobileNo,nav_Logout,nav_History;
     String userId;
-
+    ImageView image_Logo,image_back;
+    TextView welcome;
 
     @Nullable
     @Override
@@ -58,6 +61,30 @@ public class SettingPage extends Fragment {
         nav_Logout = view.findViewById(R.id.nav_Logout);
         nav_History = view.findViewById(R.id.nav_History);
         //nav_ChangeAddress = view.findViewById(R.id.nav_ChangeAddress);
+
+        image_Logo = view.findViewById(R.id.image_Logo);
+        image_back = view.findViewById(R.id.image_back);
+        welcome = view.findViewById(R.id.welcome);
+
+        image_Logo.setVisibility(View.GONE);
+        image_back.setVisibility(View.VISIBLE);
+        welcome.setVisibility(View.VISIBLE);
+        welcome.setText("Setting");
+
+        image_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                welcome.setVisibility(View.INVISIBLE);
+                image_back.setVisibility(View.INVISIBLE);
+                image_Logo.setVisibility(View.VISIBLE);
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Homepage homepage = new Homepage();
+                ft.replace(R.id.framLayout, homepage);
+                ft.commit();
+                MainActivity.bottomNavigation.setSelectedItemId(R.id.home);
+            }
+        });
 
         userId = SharedPrefManager.getInstance(getActivity()).getUser().getUserid();
 

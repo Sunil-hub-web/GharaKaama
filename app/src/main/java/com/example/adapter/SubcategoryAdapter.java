@@ -47,9 +47,19 @@ public class SubcategoryAdapter extends RecyclerView.Adapter<SubcategoryAdapter.
 
         Home_ModelClass hom_page = subcategory.get(position);
 
-        holder.text_CategoryName.setText(hom_page.getCate_name());
 
-        Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
+
+        if(hom_page.getCate_image().equals("")){
+
+            holder.text_CategoryName.setText(hom_page.getCate_name());
+
+        }else{
+
+            holder.text_CategoryName.setText(hom_page.getCate_name());
+            Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
+        }
+
+
 
          holder.btn_subCategoryName.setOnClickListener(new View.OnClickListener() {
              @Override
