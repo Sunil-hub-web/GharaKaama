@@ -18,6 +18,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.extra.SessionManager;
 import com.example.fragment.Subcategory;
 import com.example.gharakaama.R;
 import com.example.modelclass.Home_ModelClass;
@@ -29,6 +30,7 @@ public class Homepageadapter extends RecyclerView.Adapter<Homepageadapter.ViewHo
 
     Context context;
     ArrayList<Home_ModelClass> home;
+    SessionManager sessionManager;
 
     public Homepageadapter(ArrayList<Home_ModelClass> homepage, FragmentActivity activity) {
 
@@ -50,6 +52,8 @@ public class Homepageadapter extends RecyclerView.Adapter<Homepageadapter.ViewHo
 
         Home_ModelClass hom_page = home.get(position);
 
+        sessionManager = new SessionManager(context);
+
         if(hom_page.getCate_image().equals("")){
 
             holder.text_CategoryName.setText(hom_page.getCate_name());
@@ -60,10 +64,6 @@ public class Homepageadapter extends RecyclerView.Adapter<Homepageadapter.ViewHo
             Picasso.with(context).load(hom_page.getCate_image()).into(holder.category_Image);
         }
 
-
-
-
-
         holder.btn_subCategoryName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +71,8 @@ public class Homepageadapter extends RecyclerView.Adapter<Homepageadapter.ViewHo
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
                 Subcategory subcategory = new Subcategory();
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,subcategory,hom_page.getCate_id()).addToBackStack(null).commit();
+
+                sessionManager.setSubcatId(hom_page.getCate_id());
              }
         });
 

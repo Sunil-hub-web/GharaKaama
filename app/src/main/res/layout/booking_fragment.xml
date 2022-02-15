@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fifteen"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginRight="@dimen/fifteen"
+        android:layout_marginBottom="@dimen/five"
+        app:cardCornerRadius="@dimen/ten"
+        app:cardElevation="@dimen/five">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/ten"
+            android:gravity="center_vertical">
+
+           <!-- <ImageView
+                android:id="@+id/password"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:src="@drawable/lock_setting"
+                android:layout_centerVertical="true"></ImageView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_toLeftOf="@+id/nav_ChangePassword"
+                android:id="@+id/booid">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Id"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+                <TextView
+                    android:id="@+id/bookingId"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/five"
+                android:layout_below="@+id/booid"
+                android:layout_toLeftOf="@+id/nav_ChangePassword"
+                android:id="@+id/ordstatus">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Order Status"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+                <TextView
+                    android:id="@+id/OrderStatus"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_below="@+id/ordstatus"
+                android:layout_toLeftOf="@+id/nav_ChangePassword"
+                android:layout_marginTop="@dimen/five"
+                android:id="@+id/atagory">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="catagory"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+                <TextView
+                    android:id="@+id/catagory"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+            </LinearLayout>
+
+          <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_below="@+id/atagory"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_toLeftOf="@+id/nav_ChangePassword">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="wrap_content"
+                    android:text="Order Id"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+                <TextView
+                    android:id="@+id/orderId"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"></TextView>
+
+            </LinearLayout>-->
+
+
+
+            <TextView
+                android:id="@+id/ViewAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textColor="#0429F4"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/twelve_size"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:drawableRight="@drawable/keyboard_arrow_right"></TextView>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/nav_ViewAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"></Button>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

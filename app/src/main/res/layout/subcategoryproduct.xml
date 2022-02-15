@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background">
 
     <LinearLayout
@@ -15,7 +14,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/hundred_twenty"
+            android:layout_height="@dimen/hundred_fifty"
             app:cardCornerRadius="@dimen/ten"
             app:cardElevation="@dimen/five"
             android:layout_margin="@dimen/five">
@@ -27,8 +26,8 @@
 
                 <ImageView
                     android:id="@+id/category_Image"
-                    android:layout_width="@dimen/hundred"
-                    android:layout_height="@dimen/seventy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ninety"
                     android:layout_margin="@dimen/five"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/default_placeholder"
@@ -41,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/category_Image"
-                    android:layout_margin="@dimen/five"
+                    android:layout_margin="@dimen/ten"
                     android:fontFamily="@font/roboto_regular"
                     android:text="Split AC"
                     android:layout_centerHorizontal="true"
@@ -63,5 +62,6 @@
 
 
     </LinearLayout>
+
 
 </RelativeLayout>

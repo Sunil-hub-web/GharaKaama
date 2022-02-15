@@ -28,7 +28,7 @@ public class CustomerFAQ extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable  Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.customerfaq,container,false);
+        View view = inflater.inflate(R.layout.customerfaq_fragment,container,false);
 
         image_Logo = view.findViewById(R.id.image_Logo);
         image_back = view.findViewById(R.id.image_back);

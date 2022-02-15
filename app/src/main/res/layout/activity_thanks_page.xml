@@ -25,7 +25,7 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Success!"
             android:textColor="@color/black"
-            android:textSize="@dimen/thirty"></TextView>
+            android:textSize="@dimen/twenty_size"></TextView>
 
         <TextView
             android:id="@+id/text2"
@@ -38,12 +38,12 @@
             android:fontFamily="@font/roboto_regular"
             android:text="Your Booking has Successfully"
             android:textColor="@color/black"
-            android:textSize="@dimen/twenty_size"></TextView>
+            android:textSize="@dimen/edittextsize"></TextView>
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="@dimen/hundred_fifty"
-            android:layout_height="@dimen/hundred_fifty"
+            android:layout_height="@dimen/hundred_twenty"
             android:src="@drawable/check_1"
             android:layout_centerHorizontal="true">
 

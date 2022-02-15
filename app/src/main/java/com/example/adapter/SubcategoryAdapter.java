@@ -38,7 +38,7 @@ public class SubcategoryAdapter extends RecyclerView.Adapter<SubcategoryAdapter.
     @Override
     public SubcategoryAdapter.ViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.categoryproduct,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.subcategoryproduct,parent,false);
         return new SubcategoryAdapter.ViewHolder(view);
     }
 

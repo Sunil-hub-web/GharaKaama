@@ -20,6 +20,7 @@ import com.example.fragment.CustomerFAQ;
 import com.example.fragment.Homepage;
 import com.example.fragment.Queries;
 import com.example.fragment.SettingPage;
+import com.example.fragment.Subcategory;
 import com.example.fragment.Support;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public static FragmentManager fragmentManager;
     ImageView image_Logo,image_back;
     TextView welcome;
+    String imageBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +44,22 @@ public class MainActivity extends AppCompatActivity {
         image_Logo = findViewById(R.id.image_Logo);
         image_back = findViewById(R.id.image_back);
 
+        Intent intent = getIntent();
+        imageBack = intent.getStringExtra("Imageback");
 
+        if(imageBack == null){
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,new Homepage(),"HomeFragment").commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,new Homepage(),"HomeFragment").commit();
 
+        }else if(imageBack != null){
 
+            getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,new Subcategory()).commit();
+
+        }else if(imageBack.equalsIgnoreCase("Imageback")){
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.framLayout,new Subcategory()).commit();
+        }
+        
         bottomNavigation.setSelectedItemId(R.id.home);
 
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

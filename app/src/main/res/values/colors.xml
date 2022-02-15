@@ -10,4 +10,5 @@
     <color name="text">#8C8989</color>
     <color name="boxlines">#9b9b9b</color>
     <color name="textcol">#FF4A4A4A</color>
+    <color name="background">#e7eaf5</color>
 </resources>

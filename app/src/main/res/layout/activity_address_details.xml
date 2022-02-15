@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background"
     tools:context=".AddressDetails">
 
     <include layout="@layout/toolbar"
@@ -23,7 +23,7 @@
             android:layout_marginTop="@dimen/ten"
             android:orientation="vertical">
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -56,7 +56,7 @@
 
                 </TextView>
 
-            </LinearLayout>
+            </LinearLayout>-->
 
 
             <LinearLayout
@@ -105,7 +105,7 @@
 
             </LinearLayout>
 
-            <TextView
+           <!-- <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
@@ -115,7 +115,7 @@
                 android:textSize="@dimen/textsize">
 
             </TextView>
-
+-->
             <EditText
                 android:id="@+id/edit_fullname"
                 android:layout_width="match_parent"
@@ -123,18 +123,19 @@
                 android:layout_marginLeft="@dimen/twenty_five"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
-                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="Name"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
                 android:paddingLeft="@dimen/fifteen"
-                android:textColor="#25297A"
+                android:textColor="@color/black"
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
-            <TextView
+           <!-- <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
@@ -144,7 +145,7 @@
                 android:textSize="@dimen/textsize">
 
             </TextView>
-
+-->
             <EditText
                 android:id="@+id/edit_MobileNumber"
                 android:layout_width="match_parent"
@@ -152,19 +153,20 @@
                 android:layout_marginLeft="@dimen/twenty_five"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
-                android:layout_marginBottom="@dimen/ten"
+                android:layout_marginBottom="@dimen/five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="Mobile No"
                 android:maxLength="10"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:paddingLeft="@dimen/fifteen"
-                android:textColor="#25297A"
+                android:textColor="@color/black"
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
-            <TextView
+          <!--  <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
@@ -173,7 +175,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/textsize">
 
-            </TextView>
+            </TextView>-->
 
             <EditText
                 android:id="@+id/edit_EmailId"
@@ -181,11 +183,12 @@
                  android:layout_height="@dimen/forty"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginBottom="@dimen/ten"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="Email"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="textEmailAddress"
@@ -193,7 +196,7 @@
                 android:textColor="#0C0C0C"
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
-
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -203,7 +206,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/textsize">
 
-            </TextView>
+            </TextView>-->
 
             <EditText
                 android:id="@+id/edit_Address"
@@ -211,11 +214,12 @@
                  android:layout_height="@dimen/forty"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginBottom="@dimen/ten"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="Address"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
@@ -223,6 +227,7 @@
                 android:textColor="#0C0C0C"
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
+<!--
 
             <TextView
                 android:layout_width="wrap_content"
@@ -234,6 +239,7 @@
                 android:textSize="@dimen/textsize">
 
             </TextView>
+-->
 
             <EditText
                 android:id="@+id/edit_locality"
@@ -241,11 +247,12 @@
                  android:layout_height="@dimen/forty"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginBottom="@dimen/ten"
-                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginRight="@dimen/twenty_five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="locality"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
@@ -253,7 +260,7 @@
                 android:textColor="#0C0C0C"
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
-
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -263,7 +270,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/textsize">
 
-            </TextView>
+            </TextView>-->
 
             <EditText
                 android:id="@+id/edit_landmark"
@@ -271,11 +278,12 @@
                  android:layout_height="@dimen/forty"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginBottom="@dimen/ten"
-                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginRight="@dimen/twenty_five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="Landmark"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"
@@ -284,7 +292,7 @@
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
-            <TextView
+           <!-- <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
@@ -293,7 +301,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/textsize">
 
-            </TextView>
+            </TextView>-->
 
             <EditText
                 android:id="@+id/edit_State"
@@ -301,11 +309,12 @@
                  android:layout_height="@dimen/forty"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginBottom="@dimen/ten"
-                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginRight="@dimen/twenty_five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
+                android:hint="State"
                 android:fontFamily="@font/roboto_regular"
                 android:imeOptions="actionDone"
                 android:inputType="text"

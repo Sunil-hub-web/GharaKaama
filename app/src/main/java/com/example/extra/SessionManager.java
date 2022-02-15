@@ -16,7 +16,7 @@ public class SessionManager {
     int PRIVATE_MODE=0;
 
     private static final String PREF_NAME = "sharedcheckLogin";
-    private static final String User_OTP = "userotp";
+    private static final String SUBCAT_ID = "subcatid";
     private static final String USER_EMAIL = "useremail";
     private static final String USER_MOBILENO = "usermobile";
     private static final String CATEGORY_iD = "categoryid";
@@ -30,16 +30,16 @@ public class SessionManager {
         editor = sharedprefernce.edit();
     }
 
-    public void setUserOTP(String id ){
+    public void setSubcatId(String id ){
 
-        editor.putString(User_OTP,id);
+        editor.putString(SUBCAT_ID,id);
         editor.commit();
 
     }
 
-    public String getUserOTP(){
+    public String getSubcatId(){
 
-        return  sharedprefernce.getString(User_OTP,"DEFAULT");
+        return  sharedprefernce.getString(SUBCAT_ID,"DEFAULT");
     }
 
     public void setuserEmail(String email){

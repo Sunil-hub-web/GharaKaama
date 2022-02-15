@@ -27,6 +27,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.adapter.Homepageadapter;
 import com.example.adapter.SubcategoryAdapter;
 import com.example.extra.AppUrl;
+import com.example.extra.SessionManager;
 import com.example.gharakaama.MainActivity;
 import com.example.gharakaama.R;
 import com.example.modelclass.Home_ModelClass;
@@ -50,6 +51,7 @@ public class Subcategory extends Fragment {
 
     ImageView image_Logo,image_back;
     TextView welcome;
+    SessionManager sessionManager;
 
     @Nullable
     @Override
@@ -58,6 +60,8 @@ public class Subcategory extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.subcategory_fragment,container,false);
+
+        sessionManager = new SessionManager(getActivity());
 
         recyclerSubCategory = view.findViewById(R.id.recyclerSubCategory);
         image_Logo = view.findViewById(R.id.image_Logo);
@@ -87,6 +91,7 @@ public class Subcategory extends Fragment {
         //categoryId = getArguments().getString("categoryId");
 
         categoryId = getTag();
+        categoryId = sessionManager.getSubcatId();
 
         getSubCategoryDetails(categoryId);
 
@@ -135,7 +140,7 @@ public class Subcategory extends Fragment {
 
                         }
 
-                        gridLayoutManager = new GridLayoutManager(getActivity(),3,GridLayoutManager.VERTICAL,false);
+                        gridLayoutManager = new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL,false);
                         subcategoryAdapter = new SubcategoryAdapter(subcategory,getActivity(),categoryId);
                         recyclerSubCategory.setLayoutManager(gridLayoutManager);
                         recyclerSubCategory.setHasFixedSize(true);

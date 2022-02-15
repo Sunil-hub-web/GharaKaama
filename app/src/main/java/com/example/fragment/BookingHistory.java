@@ -75,9 +75,9 @@ public class BookingHistory extends Fragment {
             @Override
             public void onClick(View v) {
 
-                welcome.setVisibility(View.INVISIBLE);
-                image_back.setVisibility(View.INVISIBLE);
-                image_Logo.setVisibility(View.VISIBLE);
+                image_Logo.setVisibility(View.GONE);
+                welcome.setVisibility(View.VISIBLE);
+                image_back.setVisibility(View.VISIBLE);
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 Homepage homepage = new Homepage();
                 ft.replace(R.id.framLayout, homepage);

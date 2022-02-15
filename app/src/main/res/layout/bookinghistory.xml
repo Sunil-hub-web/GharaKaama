@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/include"></include>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_userDetails"
@@ -14,7 +18,8 @@
         android:layout_marginRight="@dimen/fifteen"
         android:layout_marginBottom="@dimen/ten"
         app:cardCornerRadius="@dimen/ten"
-        app:cardElevation="@dimen/five">
+        app:cardElevation="@dimen/five"
+        android:layout_below="@id/include">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,6 +39,7 @@
                     android:text="Book Id"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
                     android:layout_marginLeft="@dimen/fifteen"
@@ -45,6 +51,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
+                    android:fontFamily="@font/roboto_regular"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -66,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:text="Service Catagory"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -79,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -99,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:text="Service SubCatagory"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -111,6 +121,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
+                    android:fontFamily="@font/roboto_regular"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -131,6 +142,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="ServiceTypeDesc"
+                    android:fontFamily="@font/roboto_regular"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -144,6 +156,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
+                    android:fontFamily="@font/roboto_regular"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
@@ -165,6 +178,7 @@
                     android:layout_height="wrap_content"
                     android:text="date/time"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -178,6 +192,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -201,6 +216,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="@dimen/ten"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="Address Details"
                     android:textColor="@color/black"
                     android:textSize="@dimen/textsize"
@@ -211,10 +227,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_below="@id/text"
                     android:layout_margin="@dimen/ten"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/edittextsize"></TextView>
+                    android:textSize="@dimen/textsize"></TextView>
 
 
             </RelativeLayout>

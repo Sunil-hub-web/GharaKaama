@@ -47,6 +47,7 @@
     <dimen name="hundred">75dp</dimen>
     <dimen name="hundred_ten">82.5dp</dimen>
     <dimen name="hundred_twenty">90dp</dimen>
+    <dimen name="hundred_thirty">97.5dp</dimen>
     <dimen name="hundred_fifty">112.5dp</dimen>
     <dimen name="hundred_sixty">120dp</dimen>
     <dimen name="hundred_eighty">135dp</dimen>

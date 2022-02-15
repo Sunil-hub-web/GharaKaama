@@ -1,15 +1,20 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fragment.BookingDetails;
+import com.example.fragment.Subcategory;
 import com.example.gharakaama.R;
 import com.example.modelclass.BookingDetails_ModelClass;
 
@@ -30,7 +35,7 @@ public class BookingHistoryAdapter extends RecyclerView.Adapter<BookingHistoryAd
     @Override
     public BookingHistoryAdapter.ViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bookinghistory,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.booking_fragment,parent,false);
         return new ViewHolder(view);
     }
 
@@ -39,13 +44,36 @@ public class BookingHistoryAdapter extends RecyclerView.Adapter<BookingHistoryAd
 
         BookingDetails_ModelClass booking_details = bookingdetails.get(position);
 
-        holder.book_id.setText(booking_details.getBook_id());
-        holder.service_catagory.setText(booking_details.getService_catagory_1());
-        holder.service_subcatagory.setText(booking_details.getService_catagory_2());
-        holder.ServiceTypeDesc.setText(booking_details.getServiceTypeDesc());
-        holder.datetime.setText(booking_details.getDate()+",  "+booking_details.getTime());
-        holder.addressdetails.setText(booking_details.getAddress1()+"\n"+booking_details.getLocality()+","+
-                booking_details.getLandmark()+","+booking_details.getState()+"\n"+booking_details.getContact_no());
+        holder.bookingId.setText(booking_details.getBook_id());
+        holder.OrderStatus.setText(booking_details.getOrder_status());
+        holder.catagory.setText(booking_details.getService_catagory_1());
+
+        holder.nav_ViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                SharedPreferences oredrhistory_SharedPreferences = context.getSharedPreferences("details",context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = oredrhistory_SharedPreferences.edit();
+                editor.putString("Book_id",booking_details.getBook_id());
+                editor.putString("Service_catagory_1",booking_details.getService_catagory_1());
+                editor.putString("Service_catagory_2",booking_details.getService_catagory_2());
+                editor.putString("ServiceTypeDesc",booking_details.getServiceTypeDesc());
+                editor.putString("DateTime",booking_details.getDate()+",  "+booking_details.getTime());
+                editor.putString("Address1",booking_details.getAddress1());
+                editor.putString("Locality",booking_details.getLocality());
+                editor.putString("Contact_no",booking_details.getContact_no());
+                editor.putString("Landmark",booking_details.getLandmark());
+                editor.putString("State",booking_details.getState());
+                editor.commit();
+
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                BookingDetails bookingDetails = new BookingDetails();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.framLayout, bookingDetails).addToBackStack(null).commit();
+            }
+        });
+
 
     }
 
@@ -56,17 +84,19 @@ public class BookingHistoryAdapter extends RecyclerView.Adapter<BookingHistoryAd
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView book_id,service_catagory,service_subcatagory,ServiceTypeDesc,datetime,addressdetails;
+
+
+        TextView bookingId,OrderStatus,catagory,ViewAll;
+        Button nav_ViewAll;
 
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
 
-            book_id = itemView.findViewById(R.id.book_id);
-            service_catagory = itemView.findViewById(R.id.service_catagory);
-            service_subcatagory = itemView.findViewById(R.id.service_subcatagory);
-            ServiceTypeDesc = itemView.findViewById(R.id.ServiceTypeDesc);
-            datetime = itemView.findViewById(R.id.datetime);
-            addressdetails = itemView.findViewById(R.id.addressdetails);
+            bookingId = itemView.findViewById(R.id.bookingId);
+            OrderStatus = itemView.findViewById(R.id.OrderStatus);
+            catagory = itemView.findViewById(R.id.catagory);
+            nav_ViewAll = itemView.findViewById(R.id.nav_ViewAll);
+            ViewAll = itemView.findViewById(R.id.ViewAll);
         }
     }
 }

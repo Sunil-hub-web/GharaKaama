@@ -1,6 +1,7 @@
 package com.example.gharakaama;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +30,8 @@ import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.example.extra.AppUrl;
 import com.example.extra.SharedPrefManager;
+import com.example.fragment.Homepage;
+import com.example.fragment.Subcategory;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,6 +62,9 @@ public class AddressDetails extends AppCompatActivity {
     TextView ShowDayhour;
     private AwesomeValidation awesomeValidation;
 
+    ImageView image_Logo,image_back;
+    TextView welcome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +72,7 @@ public class AddressDetails extends AppCompatActivity {
 
         sub_field = findViewById(R.id.sub_field);
         field = findViewById(R.id.field);
-        ShowDayhour = findViewById(R.id.ShowDayhour);
+        //ShowDayhour = findViewById(R.id.ShowDayhour);
         edit_fullname = findViewById(R.id.edit_fullname);
         edit_MobileNumber = findViewById(R.id.edit_MobileNumber);
         edit_EmailId = findViewById(R.id.edit_EmailId);
@@ -74,6 +81,15 @@ public class AddressDetails extends AppCompatActivity {
         edit_landmark = findViewById(R.id.edit_landmark);
         edit_State = findViewById(R.id.edit_State);
         btn_Submit = findViewById(R.id.btn_Submit);
+
+        image_Logo = findViewById(R.id.image_Logo);
+        image_back = findViewById(R.id.image_back);
+        welcome = findViewById(R.id.welcome);
+
+        image_Logo.setVisibility(View.GONE);
+        image_back.setVisibility(View.VISIBLE);
+        welcome.setVisibility(View.VISIBLE);
+        welcome.setText("Booking Details");
 
         ArrayAdapter WorkingField = new ArrayAdapter(this, R.layout.spinneritem, fieldname);
         WorkingField.setDropDownViewResource(R.layout.spinnerdropdownitem);
@@ -122,10 +138,10 @@ public class AddressDetails extends AppCompatActivity {
                     sub_field.setAdapter(WorkingFieldhour);
                     sub_field.setSelection(-1, true);
 
-                    ShowDayhour.setText("Hours");
+                    //ShowDayhour.setText("Hours");
 
-                    ShowDayhour.setVisibility(View.VISIBLE);
-                    sub_field.setVisibility(View.VISIBLE);
+                    /*ShowDayhour.setVisibility(View.VISIBLE);
+                    sub_field.setVisibility(View.VISIBLE);*/
 
                     str_Selected2 = sub_field.getSelectedItem().toString();
 
@@ -136,17 +152,17 @@ public class AddressDetails extends AppCompatActivity {
                     sub_field.setAdapter(WorkingFielddays);
                     sub_field.setSelection(-1, true);
 
-                    ShowDayhour.setText("Days");
+                    //ShowDayhour.setText("Days");
 
-                    ShowDayhour.setVisibility(View.VISIBLE);
-                    sub_field.setVisibility(View.VISIBLE);
+                  /*  ShowDayhour.setVisibility(View.VISIBLE);
+                    sub_field.setVisibility(View.VISIBLE);*/
 
                     str_Selected2 = sub_field.getSelectedItem().toString();
 
                 }else if(fieldselected.equals("Full")){
 
-                    ShowDayhour.setVisibility(View.GONE);
-                    sub_field.setVisibility(View.GONE);
+                   /* ShowDayhour.setVisibility(View.GONE);
+                    sub_field.setVisibility(View.GONE);*/
 
                     str_Selected2 = "";
 
@@ -156,6 +172,25 @@ public class AddressDetails extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        image_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+              /*  welcome.setVisibility(View.INVISIBLE);
+                image_back.setVisibility(View.INVISIBLE);
+                image_Logo.setVisibility(View.VISIBLE);
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                Subcategory subcategory = new Subcategory();
+                ft.replace(R.id.framLayout, subcategory);
+                ft.commit();*/
+                //MainActivity.bottomNavigation.setSelectedItemId(R.id.home);
+
+                Intent intent1 = new Intent(AddressDetails.this,MainActivity.class);
+                intent1.putExtra("Imageback","Imageback");
+                startActivity(intent1);
             }
         });
 

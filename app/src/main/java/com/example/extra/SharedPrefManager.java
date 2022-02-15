@@ -16,6 +16,7 @@ public class SharedPrefManager {
     private static final String KEY_ID = "keyid";
     private static final String KEY_password = "keypassword";
     private static final String KEY_Name = "keyname";
+    private static final String SUBCAT_ID = "subcatid";
     private static SharedPrefManager mInstance;
     private static Context mCtx;
 

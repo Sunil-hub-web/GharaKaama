@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <include layout="@layout/toolbar"
         android:id="@+id/include"></include>
@@ -17,12 +18,12 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_userDetails"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/sixty"
+            android:layout_height="@dimen/fifty"
             android:layout_marginLeft="@dimen/fifteen"
             android:layout_marginTop="@dimen/twenty"
             android:layout_marginRight="@dimen/fifteen"
-            android:layout_marginBottom="@dimen/ten"
-            app:cardCornerRadius="@dimen/fifteen"
+            android:layout_marginBottom="@dimen/five"
+            app:cardCornerRadius="@dimen/ten"
             app:cardElevation="@dimen/five">
 
             <RelativeLayout
@@ -33,8 +34,8 @@
 
                 <ImageView
                     android:id="@+id/profile"
-                    android:layout_width="@dimen/thirty"
-                    android:layout_height="@dimen/thirty"
+                    android:layout_width="@dimen/twenty_five"
+                    android:layout_height="@dimen/twenty_five"
                     android:src="@drawable/profile_user"
                     android:layout_centerVertical="true"></ImageView>
 
@@ -44,6 +45,7 @@
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -57,6 +59,7 @@
                     android:text="7878403663"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
@@ -120,12 +123,12 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_ChangePassword"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/sixty"
+            android:layout_height="@dimen/fifty"
             android:layout_marginLeft="@dimen/fifteen"
-            android:layout_marginTop="@dimen/fifteen"
+            android:layout_marginTop="@dimen/ten"
             android:layout_marginRight="@dimen/fifteen"
-            android:layout_marginBottom="@dimen/ten"
-            app:cardCornerRadius="@dimen/fifteen"
+            android:layout_marginBottom="@dimen/five"
+            app:cardCornerRadius="@dimen/ten"
             app:cardElevation="@dimen/five">
 
             <RelativeLayout
@@ -135,8 +138,8 @@
                 android:gravity="center_vertical">
                 <ImageView
                     android:id="@+id/password"
-                    android:layout_width="@dimen/thirty"
-                    android:layout_height="@dimen/thirty"
+                    android:layout_width="@dimen/twenty_five"
+                    android:layout_height="@dimen/twenty_five"
                     android:src="@drawable/lock_setting"
                     android:layout_centerVertical="true"></ImageView>
 
@@ -146,9 +149,10 @@
                     android:layout_height="wrap_content"
                     android:text="Password"
                     android:textColor="#5F5E5E"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/twelve_size"
                     android:layout_marginLeft="@dimen/fifteen"
                     android:layout_toRightOf="@id/password"></TextView>
 
@@ -159,8 +163,9 @@
                     android:text="Change"
                     android:textColor="#0429F4"
                     android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_centerVertical="true"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/twelve_size"
                     android:layout_alignParentRight="true"
                     android:layout_marginLeft="@dimen/fifteen"
                     android:drawableRight="@drawable/keyboard_arrow_right"></TextView>
@@ -172,12 +177,12 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_Logout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/sixty"
+            android:layout_height="@dimen/fifty"
             android:layout_marginLeft="@dimen/fifteen"
-            android:layout_marginTop="@dimen/fifteen"
+            android:layout_marginTop="@dimen/ten"
             android:layout_marginRight="@dimen/fifteen"
-            android:layout_marginBottom="@dimen/ten"
-            app:cardCornerRadius="@dimen/fifteen"
+            android:layout_marginBottom="@dimen/five"
+            app:cardCornerRadius="@dimen/ten"
             app:cardElevation="@dimen/five">
 
             <RelativeLayout
@@ -187,9 +192,9 @@
                 android:gravity="center_vertical">
                 <ImageView
                     android:id="@+id/logout"
-                    android:layout_width="@dimen/thirty"
-                    android:layout_height="@dimen/thirty"
-                    android:src="@drawable/power"
+                    android:layout_width="@dimen/twenty_five"
+                    android:layout_height="@dimen/twenty_five"
+                    android:src="@drawable/logout"
                     android:layout_centerVertical="true"></ImageView>
 
                 <TextView
@@ -199,8 +204,9 @@
                     android:text="Logout"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_centerVertical="true"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/twelve_size"
                     android:layout_marginLeft="@dimen/fifteen"
                     android:layout_toRightOf="@id/logout"></TextView>
 
@@ -211,12 +217,12 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_BookingHistory"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/sixty"
+            android:layout_height="@dimen/fifty"
             android:layout_marginLeft="@dimen/fifteen"
-            android:layout_marginTop="@dimen/fifteen"
+            android:layout_marginTop="@dimen/ten"
             android:layout_marginRight="@dimen/fifteen"
-            android:layout_marginBottom="@dimen/ten"
-            app:cardCornerRadius="@dimen/fifteen"
+            android:layout_marginBottom="@dimen/five"
+            app:cardCornerRadius="@dimen/ten"
             app:cardElevation="@dimen/five">
 
             <RelativeLayout
@@ -226,8 +232,8 @@
                 android:gravity="center_vertical">
                 <ImageView
                     android:id="@+id/History"
-                    android:layout_width="@dimen/thirty"
-                    android:layout_height="@dimen/thirty"
+                    android:layout_width="@dimen/twenty_five"
+                    android:layout_height="@dimen/twenty_five"
                     android:src="@drawable/history"
                     android:layout_centerVertical="true"></ImageView>
 
@@ -238,8 +244,9 @@
                     android:text="Booking History"
                     android:textColor="#5F5E5E"
                     android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_centerVertical="true"
-                    android:textSize="@dimen/textsize"
+                    android:textSize="@dimen/twelve_size"
                     android:layout_marginLeft="@dimen/fifteen"
                     android:layout_toRightOf="@id/History"></TextView>
 

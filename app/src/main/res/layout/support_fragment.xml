@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <include layout="@layout/toolbar"
         android:id="@+id/include"></include>
@@ -20,18 +21,18 @@
             android:text="Call us on"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/twenty_five">
+            android:textSize="@dimen/twenty_size">
 
         </TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_regular"
             android:text=" +91 8076547299"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/twenty_five">
+            android:textSize="@dimen/twenty_size">
 
         </TextView>
 
@@ -43,18 +44,18 @@
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:layout_marginTop="@dimen/twenty"
-            android:textSize="@dimen/twenty_five">
+            android:textSize="@dimen/twenty_size">
 
         </TextView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_regular"
             android:text="  info@gharakaama.com"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/twenty_five">
+            android:textSize="@dimen/twenty_size">
 
         </TextView>
 
