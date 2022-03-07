@@ -46,7 +46,7 @@ public class ForgetPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_password);
 
-        btn_SendOtp = findViewById(R.id.btn_SendOtp);
+        /*btn_SendOtp = findViewById(R.id.btn_SendOtp);
         edit_EmailId = findViewById(R.id.edit_EmailId);
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -68,7 +68,7 @@ public class ForgetPassword extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
     }
 
     public void forgetPassword(String email){

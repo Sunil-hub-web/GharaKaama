@@ -22,7 +22,7 @@ public class OTPVerification extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(OTPVerification.this,ChangePassword.class);
+                Intent intent = new Intent(OTPVerification.this,MainActivity.class);
                 startActivity(intent);
             }
         });

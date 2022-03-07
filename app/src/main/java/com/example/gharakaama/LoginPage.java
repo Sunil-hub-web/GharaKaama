@@ -41,9 +41,8 @@ import java.util.Map;
 
 public class LoginPage extends AppCompatActivity {
 
-    Button btn_signin;
-    TextView text_RegisterNow,text_ForgotPassword;
-    EditText edit_MobileNumber,edit_Password;
+    TextView text_RegisterNow,btn_signin;
+    EditText edit_MobileNumber;
     String str_MobileNumber,str_Password;
     boolean passwordVisiable;
 
@@ -52,29 +51,19 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-        text_ForgotPassword = findViewById(R.id.text_ForgotPassword);
         btn_signin = findViewById(R.id.btn_signin);
-        text_RegisterNow = findViewById(R.id.text_RegisterNow);
+        //text_RegisterNow = findViewById(R.id.text_RegisterNow);
         edit_MobileNumber = findViewById(R.id.edit_MobileNumber);
-        edit_Password = findViewById(R.id.edit_Password);
 
-        text_ForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(LoginPage.this,ForgetPassword.class);
-                startActivity(intent);
-            }
-        });
-
-        text_RegisterNow.setOnClickListener(new View.OnClickListener() {
+       /* text_RegisterNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(LoginPage.this,UserRegister.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,63 +73,18 @@ public class LoginPage extends AppCompatActivity {
 
                     edit_MobileNumber.setError("Fill The Field");
 
-                }else if(edit_Password.getText().toString().trim().equals("")){
-
-                    edit_Password.setError("Fill The Field");
-
                 }else{
 
-                    str_MobileNumber = edit_MobileNumber.getText().toString().trim();
-                    str_Password = edit_Password.getText().toString().trim();
+                    Intent intent = new Intent(LoginPage.this,OTPVerification.class);
+                    startActivity(intent);
 
-                    userLogin(str_MobileNumber,str_Password);
                 }
-
-
             }
         });
 
-        edit_Password.setOnTouchListener(new View.OnTouchListener() {
-            @SuppressLint("ClickableViewAccessibility")
-            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                final int Right = 2;
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-
-                    if (event.getRawX() >= edit_Password.getRight() - edit_Password.getCompoundDrawables()[Right].getBounds().width()) {
-
-                        int selection = edit_Password.getSelectionEnd();
-                        if (passwordVisiable) {
-
-                            //set Drawable Image here
-                            edit_Password.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lock, 0, R.drawable.baseline_visibility_off, 0);
-                            edit_Password.setCompoundDrawablePadding(25);
-                            // for show Password
-                            edit_Password.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                            passwordVisiable = false;
-
-                        } else {
-
-                            //set Drawable Image here
-                            edit_Password.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.lock, 0, R.drawable.baseline_visibility, 0);
-                            edit_Password.setCompoundDrawablePadding(25);
-                            // for show Password
-                            edit_Password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                            passwordVisiable = true;
-                        }
-
-                        edit_Password.setSelection(selection);
-                        return true;
-                    }
-                }
-                return false;
-            }
-        });
     }
 
-    public void userLogin(String mobileNo,String password){
+   /* public void userLogin(String mobileNo,String password){
 
         ProgressDialog progressDialog = new ProgressDialog(LoginPage.this);
         progressDialog.setMessage("User Login Please wait...");
@@ -166,7 +110,7 @@ public class LoginPage extends AppCompatActivity {
                         String email = jsonObject.getString("email");
                         String contact_no = jsonObject.getString("contact_no");
                         String user_type = jsonObject.getString("contact_no");
-                        String password = edit_Password.getText().toString().trim();
+                        //String password = edit_Password.getText().toString().trim();
 
                         Login_ModelClass login_modelClass = new Login_ModelClass(
                                 id,contact_no,email,name,password
@@ -239,7 +183,7 @@ public class LoginPage extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(LoginPage.this);
         requestQueue.add(stringRequest);
 
-    }
+    }*/
 
     @Override
     public void onBackPressed() {

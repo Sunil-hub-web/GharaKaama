@@ -55,7 +55,7 @@ public class UserRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
 
-        text_signin = findViewById(R.id.text_signin);
+       /* text_signin = findViewById(R.id.text_signin);
         btn_signup = findViewById(R.id.btn_signup);
         edit_fullname = findViewById(R.id.edit_fullname);
         edit_MobileNumber = findViewById(R.id.edit_MobileNumber);
@@ -185,10 +185,10 @@ public class UserRegister extends AppCompatActivity {
                 }
                 return false;
             }
-        });
+        });*/
     }
 
-    public void userRegister(String userName,String mobileNo,String email,String password){
+   /* public void userRegister(String userName,String mobileNo,String email,String password){
 
 
         ProgressDialog progressDialog = new ProgressDialog(UserRegister.this);
@@ -234,9 +234,9 @@ public class UserRegister extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
 
                 progressDialog.dismiss();
-                /*error.printStackTrace();
+                *//*error.printStackTrace();
                 Toast.makeText(UserRegister.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
-*/
+*//*
                 if (error instanceof TimeoutError || error instanceof NoConnectionError) {
 
                     Toast.makeText(UserRegister.this, "Please check Internet Connection", Toast.LENGTH_SHORT).show();
@@ -286,7 +286,7 @@ public class UserRegister extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(UserRegister.this);
         requestQueue.add(stringRequest);
 
-    }
+    }*/
 
     @Override
     public void onBackPressed() {

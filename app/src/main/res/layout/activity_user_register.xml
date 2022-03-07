@@ -7,7 +7,7 @@
     android:background="@drawable/background_bg"
     tools:context=".UserRegister">
 
-    <ScrollView
+   <!-- <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -183,14 +183,14 @@
                 android:textColor="#FFFFFF"
                 android:textStyle="normal" />
 
-           <!-- <TextView
+           &lt;!&ndash; <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/twenty_five"
                 android:layout_marginRight="@dimen/twenty_five"
                 android:text="* Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                 android:textColor="#FFFFFF"
-                android:textSize="13sp" />-->
+                android:textSize="13sp" />&ndash;&gt;
 
             <Button
                 android:id="@+id/btn_signup"
@@ -239,5 +239,6 @@
             </RelativeLayout>
         </LinearLayout>
 
-    </ScrollView>
+    </ScrollView>-->
+
 </RelativeLayout>

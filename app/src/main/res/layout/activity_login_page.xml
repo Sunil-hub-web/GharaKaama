@@ -7,153 +7,121 @@
     tools:context=".LoginPage"
     android:background="@drawable/background_bg">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="@dimen/hundred_eighty"
-            android:layout_height="@dimen/hundred_eighty"
-            android:src="@drawable/ghara_kama"
-            android:layout_gravity="center">
-
-        </ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mobile No"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto_light"
-            android:layout_marginLeft="@dimen/twenty_five"
-            android:textSize="@dimen/textsize">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/edit_MobileNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/twenty_five"
-            android:layout_marginTop="@dimen/seven"
-            android:layout_marginRight="@dimen/twenty_five"
-            android:layout_marginBottom="@dimen/twenty"
-            android:drawablePadding="@dimen/twenty_five"
-            android:drawableLeft="@drawable/smartphone"
-            android:ems="10"
-            android:backgroundTint="@color/white"
-            android:imeOptions="actionDone"
-            android:maxLength="10"
-            android:inputType="number"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/fifteen"
-            android:textStyle="normal"
-            android:fontFamily="@font/roboto_regular"/>
+            android:layout_height="@dimen/hundred_ten"
+            android:src="@drawable/glogo"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginTop="@dimen/hundred_twenty"></ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto_light"
-            android:layout_marginLeft="@dimen/twenty_five"
-            android:textSize="@dimen/textsize">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/edit_Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edit_MobileNumber"
-            android:layout_marginLeft="@dimen/twenty_five"
-            android:layout_marginTop="@dimen/seven"
-            android:layout_marginRight="@dimen/twenty_five"
-            android:layout_marginBottom="@dimen/twenty"
-            android:drawableLeft="@drawable/lock"
-            android:drawablePadding="@dimen/twenty_five"
-            android:ems="10"
-            android:backgroundTint="@color/white"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            android:drawableRight="@drawable/baseline_visibility_off"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/fifteen"
-            android:textStyle="normal"
-            android:fontFamily="@font/roboto_regular"/>
-
-       <!-- <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/twenty_five"
-            android:layout_marginRight="@dimen/twenty_five"
-            android:text="* Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-            android:textColor="#FFFFFF"
-            android:textSize="13sp" />-->
-
-        <Button
-            android:id="@+id/btn_signin"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/fifty"
-            android:layout_below="@+id/text_ForgotPassword"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/twenty_five"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/button_bg"
-            android:text="Log In"
-            android:fontFamily="@font/roboto_light"
-            android:textAllCaps="true"
-            android:textColor="@color/white"
-            android:textSize="@dimen/twenty_size"></Button>
-
-        <TextView
-            android:id="@+id/text_ForgotPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password ?"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto_light"
-            android:textSize="@dimen/textsize"
-            android:layout_gravity="center">
-
-        </TextView>
-
-        <RelativeLayout
-            android:id="@+id/r1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="Proceed With You"
+            android:textColor="@color/purple2"
             android:layout_marginTop="@dimen/twenty"
-            android:layout_gravity="center">
+            android:fontFamily="@font/roboto_light"
+            android:textSize="@dimen/edittextsize"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_toRightOf="@id/profile"></TextView>
 
-            <TextView
-                android:id="@+id/login2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don't Have an account?"
-                android:textColor="#938C8C"
-                android:textSize="@dimen/textsize"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto_bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login/Sigh Up"
+            android:textColor="@color/purple1"
+            android:layout_marginTop="@dimen/ten"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/twenty_size"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_toRightOf="@id/profile"></TextView>
 
-            <TextView
-                android:id="@+id/text_RegisterNow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/login2"
-                android:text=" Register Now"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_five"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/edit_fullname"
+                android:layout_width="0dp"
+                android:layout_weight="1.6"
+                android:layout_height="@dimen/fifty"
+                android:drawableLeft="@drawable/smartphone"
+                android:paddingLeft="@dimen/ten"
+                android:drawablePadding="@dimen/twenty"
+                android:ems="10"
+                android:background="@drawable/login_bg"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="@dimen/fifteen"
+                android:hint="Your Mobile Number"
+                android:textColorHint="#FFFFFF"
+                android:imeOptions="actionDone"
+                android:inputType="text"
                 android:textColor="#FFFFFF"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btn_signin"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="@dimen/fifty"
+                android:fontFamily="@font/roboto_light"
+                android:background="@drawable/button_bg"
+                android:textColor="@color/white"
                 android:textSize="@dimen/textsize"
-                android:fontFamily="@font/roboto_light"/>
+                android:focusable="false"
+                android:paddingLeft="@dimen/eight"
+                android:layout_marginLeft="@dimen/ten"
+                android:drawableLeft="@drawable/next">
+
+            </Button>
 
 
-        </RelativeLayout>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/twenty">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By logging in you'd agree to our"
+        android:textColor="@color/purple2"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/textsize"
+        android:layout_toRightOf="@id/profile"
+        android:layout_gravity="center"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and Conditions"
+        android:textColor="@color/purple2"
+        android:layout_marginTop="@dimen/five"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/textsize"
+        android:layout_toRightOf="@id/profile"
+        android:layout_gravity="center"></TextView>
+
+
+</LinearLayout>
 
 
 </RelativeLayout>
