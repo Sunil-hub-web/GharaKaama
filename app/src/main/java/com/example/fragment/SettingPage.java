@@ -55,8 +55,8 @@ public class SettingPage extends Fragment {
 
         View view = inflater.inflate(R.layout.settingpage_fragment, container, false);
 
-        nav_ChangePassword = view.findViewById(R.id.nav_ChangePassword);
-        nav_Name = view.findViewById(R.id.nav_Name);
+        //nav_ChangePassword = view.findViewById(R.id.nav_ChangePassword);
+        //nav_Name = view.findViewById(R.id.nav_Name);
         nav_mobileNo = view.findViewById(R.id.nav_mobileNo);
         nav_Logout = view.findViewById(R.id.nav_Logout);
         nav_History = view.findViewById(R.id.nav_History);
@@ -88,7 +88,7 @@ public class SettingPage extends Fragment {
 
         userId = SharedPrefManager.getInstance(getActivity()).getUser().getUserid();
 
-        nav_ChangePassword.setOnClickListener(new View.OnClickListener() {
+       /* nav_ChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -98,7 +98,7 @@ public class SettingPage extends Fragment {
                 ft.addToBackStack(null);
                 ft.commit();
             }
-        });
+        });*/
 
         /*nav_ChangeAddress.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,11 +162,11 @@ public class SettingPage extends Fragment {
                         Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
 
                         String id = jsonObject.getString("id");
-                        String name = jsonObject.getString("name");
+                        //String name = jsonObject.getString("name");
                         String email = jsonObject.getString("email");
                         String contact_no = jsonObject.getString("contact_no");
 
-                        nav_Name.setText(name);
+                        //nav_Name.setText(name);
                         nav_mobileNo.setText(contact_no);
 
                     }else if(success.equals("false")){

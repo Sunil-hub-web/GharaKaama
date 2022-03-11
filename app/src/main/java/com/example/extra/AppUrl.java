@@ -2,9 +2,9 @@ package com.example.extra;
 
 public class AppUrl {
 
-    public  static final String register = "https://gharakaama.com/admin/Api/api.php?method=register";
+    public  static final String verifyotp = "https://gharakaama.com/admin/Api/api.php?method=verify_otp";
 
-    public  static final String login = "https://gharakaama.com/admin/Api/api.php?method=login";
+    public  static final String login = "https://gharakaama.com/admin/Api/api.php?method=loginwithotp";
 
     public  static final String getProfile = "https://gharakaama.com/admin/Api/api.php?method=getProfile";
 

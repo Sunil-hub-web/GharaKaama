@@ -69,7 +69,6 @@ public class ChangePassword_Fragment extends Fragment {
         btn_ChangePassword = view.findViewById(R.id.btn_ChangePassword);
 
         str_UserId = SharedPrefManager.getInstance(getActivity()).getUser().getUserid();
-        oldPassword = SharedPrefManager.getInstance(getActivity()).getUser().getPassword();
 
         btn_ChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override

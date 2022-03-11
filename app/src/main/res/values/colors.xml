@@ -13,4 +13,5 @@
     <color name="boxlines">#9b9b9b</color>
     <color name="textcol">#FF4A4A4A</color>
     <color name="background">#e7eaf5</color>
+    <color name="background1">#FFFFFFFF</color>
 </resources>

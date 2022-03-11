@@ -73,10 +73,7 @@ public class BookingDetails extends Fragment {
         Service_TypeDesc = oredrhistory_SharedPreferences.getString("ServiceTypeDesc",null);
         DateTime = oredrhistory_SharedPreferences.getString("DateTime",null);
         Address1 = oredrhistory_SharedPreferences.getString("Address1",null);
-        Locality = oredrhistory_SharedPreferences.getString("Locality",null);
         Contact_no = oredrhistory_SharedPreferences.getString("Contact_no",null);
-        Landmark = oredrhistory_SharedPreferences.getString("Landmark",null);
-        State = oredrhistory_SharedPreferences.getString("State",null);
 
 
         book_id.setText(Book_id);
@@ -84,7 +81,7 @@ public class BookingDetails extends Fragment {
         service_subcatagory.setText(Service_catagory_2);
         ServiceTypeDesc.setText(Service_TypeDesc);
         datetime.setText(DateTime);
-        addressdetails.setText(Address1 + "\n" + Locality+ "," + Landmark + "," + State + "\n" + Contact_no);
+        addressdetails.setText(Address1 + "\n" + Contact_no);
 
         return itemView;
     }

@@ -43,7 +43,7 @@ public class SharedPrefManager {
         editor.putString(KEY_mobile_number,     login_modelClass.getMobileNo ());
         editor.putString(KEY_email,                login_modelClass.getEmailId ());
         editor.putString(KEY_Name,                login_modelClass.getUserName ());
-        editor.putString(KEY_password,                login_modelClass.getPassword ());
+
 
 
         editor.apply();
@@ -64,8 +64,7 @@ public class SharedPrefManager {
                 sharedPrefManager.getString(KEY_ID, null),
                 sharedPrefManager.getString(KEY_mobile_number, null),
                 sharedPrefManager.getString(KEY_email, null),
-                sharedPrefManager.getString(KEY_Name, null),
-                sharedPrefManager.getString(KEY_password, null)
+                sharedPrefManager.getString(KEY_Name, null)
 
         );
 

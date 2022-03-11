@@ -21,6 +21,7 @@ public class SessionManager {
     private static final String USER_MOBILENO = "usermobile";
     private static final String CATEGORY_iD = "categoryid";
     private static final String IS_LOGIN="islogin";
+    private static final String IS_OTP="isotp";
 
 
     public SessionManager(Context context){

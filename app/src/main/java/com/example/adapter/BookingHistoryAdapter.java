@@ -62,10 +62,8 @@ public class BookingHistoryAdapter extends RecyclerView.Adapter<BookingHistoryAd
                 editor.putString("ServiceTypeDesc",booking_details.getServiceTypeDesc());
                 editor.putString("DateTime",booking_details.getDate()+",  "+booking_details.getTime());
                 editor.putString("Address1",booking_details.getAddress1());
-                editor.putString("Locality",booking_details.getLocality());
                 editor.putString("Contact_no",booking_details.getContact_no());
-                editor.putString("Landmark",booking_details.getLandmark());
-                editor.putString("State",booking_details.getState());
+                editor.apply();
                 editor.commit();
 
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();

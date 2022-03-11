@@ -39,30 +39,30 @@
                     android:src="@drawable/profile_user"
                     android:layout_centerVertical="true"></ImageView>
 
-                <TextView
+               <!-- <TextView
                     android:id="@+id/nav_Name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sunil Dash"
-                    android:textColor="#5F5E5E"
+                    android:textColor="@color/purple1"
                     android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
                     android:layout_marginLeft="@dimen/fifteen"
-                    android:layout_toRightOf="@id/profile"></TextView>
+                    android:layout_toRightOf="@id/profile"></TextView>-->
 
                 <TextView
                     android:id="@+id/nav_mobileNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="7878403663"
-                    android:textColor="#5F5E5E"
+                    android:textColor="@color/purple1"
                     android:textStyle="bold"
                     android:fontFamily="@font/roboto_regular"
-                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/textsize"
+                    android:layout_toRightOf="@id/profile"
                     android:layout_marginLeft="@dimen/fifteen"></TextView>
 
             </RelativeLayout>
@@ -120,7 +120,7 @@
 
         </androidx.cardview.widget.CardView>-->
 
-        <androidx.cardview.widget.CardView
+       <!-- <androidx.cardview.widget.CardView
             android:id="@+id/card_ChangePassword"
             android:layout_width="match_parent"
             android:layout_height="@dimen/fifty"
@@ -172,6 +172,47 @@
 
             </RelativeLayout>
 
+        </androidx.cardview.widget.CardView>-->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_BookingHistory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginRight="@dimen/fifteen"
+            android:layout_marginBottom="@dimen/five"
+            app:cardCornerRadius="@dimen/ten"
+            app:cardElevation="@dimen/five">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ten"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/History"
+                    android:layout_width="@dimen/twenty_five"
+                    android:layout_height="@dimen/twenty_five"
+                    android:src="@drawable/history"
+                    android:layout_centerVertical="true"></ImageView>
+
+                <TextView
+                    android:id="@+id/nav_History"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking History"
+                    android:textColor="@color/purple1"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/twelve_size"
+                    android:layout_marginLeft="@dimen/fifteen"
+                    android:layout_toRightOf="@id/History"></TextView>
+
+            </RelativeLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -202,7 +243,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Logout"
-                    android:textColor="#5F5E5E"
+                    android:textColor="@color/purple1"
                     android:textStyle="bold"
                     android:fontFamily="@font/roboto_regular"
                     android:layout_centerVertical="true"
@@ -214,45 +255,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_BookingHistory"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/fifty"
-            android:layout_marginLeft="@dimen/fifteen"
-            android:layout_marginTop="@dimen/ten"
-            android:layout_marginRight="@dimen/fifteen"
-            android:layout_marginBottom="@dimen/five"
-            app:cardCornerRadius="@dimen/ten"
-            app:cardElevation="@dimen/five">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/ten"
-                android:gravity="center_vertical">
-                <ImageView
-                    android:id="@+id/History"
-                    android:layout_width="@dimen/twenty_five"
-                    android:layout_height="@dimen/twenty_five"
-                    android:src="@drawable/history"
-                    android:layout_centerVertical="true"></ImageView>
-
-                <TextView
-                    android:id="@+id/nav_History"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Booking History"
-                    android:textColor="#5F5E5E"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/roboto_regular"
-                    android:layout_centerVertical="true"
-                    android:textSize="@dimen/twelve_size"
-                    android:layout_marginLeft="@dimen/fifteen"
-                    android:layout_toRightOf="@id/History"></TextView>
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

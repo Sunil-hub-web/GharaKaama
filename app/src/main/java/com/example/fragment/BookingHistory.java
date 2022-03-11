@@ -133,15 +133,15 @@ public class BookingHistory extends Fragment {
                             JSONObject jsonObject_Address = jsonObject_All_Bookings.getJSONObject("Address");
 
                             String address1 = jsonObject_Address.getString("address1");
-                            String locality = jsonObject_Address.getString("locality");
+                        /*    String locality = jsonObject_Address.getString("locality");
                             String landmark = jsonObject_Address.getString("landmark");
-                            String state = jsonObject_Address.getString("state");
+                            String state = jsonObject_Address.getString("state");*/
                             String contact_no = jsonObject_Address.getString("contact_no");
 
                             BookingDetails_ModelClass bookingDetails_modelClass = new BookingDetails_ModelClass(
 
                                     order_id,order_status,book_id,service_catagory_1,service_catagory_2,
-                                    ServiceTypeDesc,description,date,time,address1,locality,landmark,state,
+                                    ServiceTypeDesc,description,date,time,address1,"","","",
                                     contact_no
 
                             );

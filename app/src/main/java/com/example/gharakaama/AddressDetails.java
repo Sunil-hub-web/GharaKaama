@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
@@ -29,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.example.extra.AppUrl;
+import com.example.extra.InputFilterMinMax;
 import com.example.extra.SharedPrefManager;
 import com.example.fragment.Homepage;
 import com.example.fragment.Subcategory;
@@ -44,12 +46,12 @@ import java.util.Map;
 public class AddressDetails extends AppCompatActivity {
 
     Spinner field,sub_field;
-    EditText edit_fullname,edit_MobileNumber,edit_EmailId,edit_Address,edit_locality,edit_landmark,edit_State;
-    String str_fullname,str_MobileNumber,str_EmailId,str_Address,str_locality,str_landmark,str_State,userId,
-            str_categoryId,str_SubCategoryId,fieldselected,str_Selected1,str_Selected2,ServiceTypeDesc,date,
-            time,str_address;
+    EditText edit_fullname,edit_MobileNumber,edit_Address;
+    String str_fullname,str_MobileNumber,str_Address,userId,str_categoryId,str_SubCategoryId,
+            fieldselected,str_Selected1,str_Selected2,ServiceTypeDesc,date,time,str_address;
     Button btn_Submit;
-    String[] fieldname = {"--Select--", "Major", "Minor", "Full"};
+    String[] fieldname = {"-Select Category-", "Major", "Minor", "Full"};
+
     String[] fieldnamehour = {"--Select hour--", "1 hour", "2 hour", "3 hour","4 hour","5 hour","6 hour",
                               "7 hour","8 hour","9 hour", "10 hour","11 hour","12 hour","13 hour","14 hour",
                               "15 hour","16 hour","17 hour","18 hour","19 hour","20 hour","21 hour","22 hour",
@@ -75,11 +77,11 @@ public class AddressDetails extends AppCompatActivity {
         //ShowDayhour = findViewById(R.id.ShowDayhour);
         edit_fullname = findViewById(R.id.edit_fullname);
         edit_MobileNumber = findViewById(R.id.edit_MobileNumber);
-        edit_EmailId = findViewById(R.id.edit_EmailId);
+       // edit_EmailId = findViewById(R.id.edit_EmailId);
         edit_Address = findViewById(R.id.edit_Address);
-        edit_locality = findViewById(R.id.edit_locality);
-        edit_landmark = findViewById(R.id.edit_landmark);
-        edit_State = findViewById(R.id.edit_State);
+       // edit_locality = findViewById(R.id.edit_locality);
+        //edit_landmark = findViewById(R.id.edit_landmark);
+       // edit_State = findViewById(R.id.edit_State);
         btn_Submit = findViewById(R.id.btn_Submit);
 
         image_Logo = findViewById(R.id.image_Logo);
@@ -90,6 +92,8 @@ public class AddressDetails extends AppCompatActivity {
         image_back.setVisibility(View.VISIBLE);
         welcome.setVisibility(View.VISIBLE);
         welcome.setText("Booking Details");
+
+        //edit_Address.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "30")});
 
         ArrayAdapter WorkingField = new ArrayAdapter(this, R.layout.spinneritem, fieldname);
         WorkingField.setDropDownViewResource(R.layout.spinnerdropdownitem);
@@ -120,7 +124,7 @@ public class AddressDetails extends AppCompatActivity {
         //awesomeValidation.addValidation (AddressDetails.this,R.id.edit_landmark,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
         //awesomeValidation.addValidation (AddressDetails.this,R.id.edit_State,"^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$",R.string.entername);
         awesomeValidation.addValidation (AddressDetails.this,R.id.edit_MobileNumber,"^[0-9]{10}$",R.string.entercontact);
-        awesomeValidation.addValidation (AddressDetails.this,R.id.edit_EmailId, Patterns.EMAIL_ADDRESS,R.string.enteremail);
+        //awesomeValidation.addValidation (AddressDetails.this,R.id.edit_EmailId, Patterns.EMAIL_ADDRESS,R.string.enteremail);
 
 
         field.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -128,6 +132,7 @@ public class AddressDetails extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 fieldselected = field.getSelectedItem().toString();
+
 
 
 
@@ -140,8 +145,8 @@ public class AddressDetails extends AppCompatActivity {
 
                     //ShowDayhour.setText("Hours");
 
-                    /*ShowDayhour.setVisibility(View.VISIBLE);
-                    sub_field.setVisibility(View.VISIBLE);*/
+                   // ShowDayhour.setVisibility(View.VISIBLE);
+                    sub_field.setVisibility(View.VISIBLE);
 
                     str_Selected2 = sub_field.getSelectedItem().toString();
 
@@ -154,8 +159,8 @@ public class AddressDetails extends AppCompatActivity {
 
                     //ShowDayhour.setText("Days");
 
-                  /*  ShowDayhour.setVisibility(View.VISIBLE);
-                    sub_field.setVisibility(View.VISIBLE);*/
+                    //ShowDayhour.setVisibility(View.VISIBLE);
+                    sub_field.setVisibility(View.VISIBLE);
 
                     str_Selected2 = sub_field.getSelectedItem().toString();
 
@@ -166,6 +171,8 @@ public class AddressDetails extends AppCompatActivity {
 
                     str_Selected2 = "";
 
+                    sub_field.setVisibility(View.GONE);
+
                 }
             }
 
@@ -174,6 +181,19 @@ public class AddressDetails extends AppCompatActivity {
 
             }
         });
+
+      sub_field.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+          @Override
+          public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+              Toast.makeText(AddressDetails.this, "Please Select ", Toast.LENGTH_SHORT).show();
+          }
+
+          @Override
+          public void onNothingSelected(AdapterView<?> parent) {
+
+          }
+      });
 
         image_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,42 +228,70 @@ public class AddressDetails extends AppCompatActivity {
 
                     if(str_Selected1.equals("Full")){
 
-                        str_Selected2 = "";
-
-                        str_fullname = edit_fullname.getText().toString().trim();
-                        str_MobileNumber = edit_MobileNumber.getText().toString().trim();
-                        str_EmailId = edit_EmailId.getText().toString().trim();
-                        str_Address = edit_Address.getText().toString().trim();
-                        str_locality = edit_locality.getText().toString().trim();
-                        str_landmark = edit_landmark.getText().toString().trim();
-                        str_State = edit_State.getText().toString().trim();
-
                         str_Selected1 = field.getSelectedItem().toString();
-                        ServiceTypeDesc = str_Selected1;
 
-                        str_address = str_fullname+","+str_EmailId+","+str_Address;
+                        if(str_Selected1.equals("-Select Category-")){
 
-                        placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
-                                date,time,str_address,str_locality,str_landmark,str_State,str_MobileNumber);
+                            Toast.makeText(AddressDetails.this, "Please Select Categpory", Toast.LENGTH_SHORT).show();
+
+                        }else{
+
+                            str_Selected2 = "";
+
+                            str_fullname = edit_fullname.getText().toString().trim();
+                            str_MobileNumber = edit_MobileNumber.getText().toString().trim();
+                            //str_EmailId = edit_EmailId.getText().toString().trim();
+                            str_Address = edit_Address.getText().toString().trim();
+                          /*  str_locality = edit_locality.getText().toString().trim();
+                            str_landmark = edit_landmark.getText().toString().trim();
+                            str_State = edit_State.getText().toString().trim();*/
+
+                            str_Selected1 = field.getSelectedItem().toString();
+                            ServiceTypeDesc = str_Selected1;
+
+                            str_address = str_fullname+","+str_Address;
+
+                            placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
+                                    date,time,str_address,"","","",str_MobileNumber);
+
+                        }
 
                     }else{
 
-                        str_fullname = edit_fullname.getText().toString().trim();
-                        str_MobileNumber = edit_MobileNumber.getText().toString().trim();
-                        str_EmailId = edit_EmailId.getText().toString().trim();
-                        str_Address = edit_Address.getText().toString().trim();
-                        str_locality = edit_locality.getText().toString().trim();
-                        str_landmark = edit_landmark.getText().toString().trim();
-                        str_State = edit_State.getText().toString().trim();
-
                         str_Selected2 = sub_field.getSelectedItem().toString();
                         str_Selected1 = field.getSelectedItem().toString();
-                        ServiceTypeDesc = str_Selected1+"/"+str_Selected2;
 
-                        str_address = str_fullname+","+str_EmailId+","+str_Address;
+                        if(str_Selected1.equals("-Select Category-")){
 
-                        placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
-                                date,time,str_address,str_locality,str_landmark,str_State,str_MobileNumber);
+                            Toast.makeText(AddressDetails.this, "Please Select Categpory", Toast.LENGTH_SHORT).show();
+
+                        }else if(str_Selected2.equals("--Select hour--")){
+
+                            Toast.makeText(AddressDetails.this, "Please Select hour", Toast.LENGTH_SHORT).show();
+
+                        }else if(str_Selected2.equals("--Select Days--")){
+
+                            Toast.makeText(AddressDetails.this, "Please Select Days", Toast.LENGTH_SHORT).show();
+
+                        }else{
+
+                            str_fullname = edit_fullname.getText().toString().trim();
+                            str_MobileNumber = edit_MobileNumber.getText().toString().trim();
+                            //str_EmailId = edit_EmailId.getText().toString().trim();
+                            str_Address = edit_Address.getText().toString().trim();
+                          /*  str_locality = edit_locality.getText().toString().trim();
+                            str_landmark = edit_landmark.getText().toString().trim();
+                            str_State = edit_State.getText().toString().trim();*/
+
+
+                            ServiceTypeDesc = str_Selected1+"/"+str_Selected2;
+
+                            str_address = str_fullname+","+str_Address;
+
+                            placeorder(userId,str_categoryId,str_SubCategoryId,ServiceTypeDesc,"description",
+                                    date,time,str_address,"","","",str_MobileNumber);
+                        }
+
                     }
 
 
@@ -252,8 +300,7 @@ public class AddressDetails extends AppCompatActivity {
 
                     Toast.makeText(AddressDetails.this, "Enter validate data", Toast.LENGTH_SHORT).show();
                 }
-
-
+                
             }
         });
     }

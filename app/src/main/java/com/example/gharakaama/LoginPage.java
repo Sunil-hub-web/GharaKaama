@@ -73,10 +73,16 @@ public class LoginPage extends AppCompatActivity {
 
                     edit_MobileNumber.setError("Fill The Field");
 
+                }else if(edit_MobileNumber.getText().toString().trim().length() != 10){
+
+                    edit_MobileNumber.setError("Enter Valide Mobile No");
+
                 }else{
 
-                    Intent intent = new Intent(LoginPage.this,OTPVerification.class);
-                    startActivity(intent);
+                    str_MobileNumber = edit_MobileNumber.getText().toString().trim();
+
+                    userLogin(str_MobileNumber);
+
 
                 }
             }
@@ -84,7 +90,7 @@ public class LoginPage extends AppCompatActivity {
 
     }
 
-   /* public void userLogin(String mobileNo,String password){
+    public void userLogin(String mobileNo){
 
         ProgressDialog progressDialog = new ProgressDialog(LoginPage.this);
         progressDialog.setMessage("User Login Please wait...");
@@ -105,20 +111,14 @@ public class LoginPage extends AppCompatActivity {
                         String msg = jsonObject.getString("msg");
                         Toast.makeText(LoginPage.this, msg, Toast.LENGTH_SHORT).show();
 
-                        String id = jsonObject.getString("id");
-                        String name = jsonObject.getString("name");
-                        String email = jsonObject.getString("email");
-                        String contact_no = jsonObject.getString("contact_no");
-                        String user_type = jsonObject.getString("contact_no");
-                        //String password = edit_Password.getText().toString().trim();
+                        String otp = jsonObject.getString("otp");
+                        String user_id = jsonObject.getString("user_id");
+                        String contact = jsonObject.getString("contact");
 
-                        Login_ModelClass login_modelClass = new Login_ModelClass(
-                                id,contact_no,email,name,password
-                        );
-
-                        SharedPrefManager.getInstance(LoginPage.this).userLogin(login_modelClass);
-
-                        Intent intent = new Intent(LoginPage.this,MainActivity.class);
+                        Intent intent = new Intent(LoginPage.this,OTPVerification.class);
+                        intent.putExtra("otp",otp);
+                        intent.putExtra("user_id",user_id);
+                        intent.putExtra("contact",contact);
                         startActivity(intent);
 
                     }else if(success.equals("false")){
@@ -173,8 +173,7 @@ public class LoginPage extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
 
                 Map<String,String> params = new HashMap<>();
-                params.put("contactNo",mobileNo);
-                params.put("password",password);
+                params.put("contact_no",mobileNo);
                 return params;
             }
         };
@@ -183,7 +182,7 @@ public class LoginPage extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(LoginPage.this);
         requestQueue.add(stringRequest);
 
-    }*/
+    }
 
     @Override
     public void onBackPressed() {

@@ -7,19 +7,19 @@
     tools:context=".OTPVerification"
     android:background="@drawable/background_bg">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/hundred_fifty"
-        android:layout_centerInParent="true">
-
-
-    </ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/hundred_eighty"
+            android:layout_height="@dimen/hundred_ten"
+            android:src="@drawable/glogo"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/hundred"></ImageView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,7 +27,8 @@
             android:layout_marginLeft="@dimen/twenty_five"
             android:fontFamily="@font/roboto_bold"
             android:text="Phone Verification"
-            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/thirty"
+            android:textColor="@color/purple2"
             android:textSize="@dimen/twenty_five">
 
         </TextView>
@@ -37,9 +38,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/five"
             android:layout_marginLeft="@dimen/twenty_five"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/roboto_regular"
             android:text="Please enter your OTP below"
-            android:textColor="@color/black"
+            android:textColor="@color/purple1"
             android:textSize="@dimen/edittextsize">
 
         </TextView>

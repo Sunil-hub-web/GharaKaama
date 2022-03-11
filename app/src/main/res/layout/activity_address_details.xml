@@ -7,15 +7,16 @@
     android:background="@color/background"
     tools:context=".AddressDetails">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/include"></include>
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"></include>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
         android:layout_below="@id/include"
-        android:layout_marginTop="@dimen/five">
+        android:layout_marginTop="@dimen/five"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,9 +71,9 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/forty"
                     android:layout_marginLeft="@dimen/twenty_five"
+                    android:layout_marginTop="@dimen/five"
                     android:layout_marginRight="@dimen/ten"
                     android:layout_marginBottom="@dimen/ten"
-                    android:layout_marginTop="@dimen/five"
                     android:layout_weight="1"
                     android:background="@drawable/button_back1"
                     android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
@@ -89,9 +90,9 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/forty"
                     android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginTop="@dimen/five"
                     android:layout_marginRight="@dimen/twenty_five"
                     android:layout_marginBottom="@dimen/ten"
-                    android:layout_marginTop="@dimen/five"
                     android:layout_weight="1"
                     android:background="@drawable/button_back1"
                     android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
@@ -105,29 +106,29 @@
 
             </LinearLayout>
 
-           <!-- <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Name"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/twenty_five"
+                 android:fontFamily="@font/roboto_regular"
+                 android:text="Name"
+                 android:textColor="@color/black"
+                 android:textSize="@dimen/textsize">
 
-            </TextView>
--->
+             </TextView>
+ -->
             <EditText
                 android:id="@+id/edit_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/forty"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
-                android:hint="Name"
                 android:fontFamily="@font/roboto_regular"
+                android:hint="Name"
                 android:imeOptions="actionDone"
                 android:inputType="text"
                 android:paddingLeft="@dimen/fifteen"
@@ -135,113 +136,111 @@
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
-           <!-- <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Mobile No"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/twenty_five"
+                 android:fontFamily="@font/roboto_regular"
+                 android:text="Mobile No"
+                 android:textColor="@color/black"
+                 android:textSize="@dimen/textsize">
 
-            </TextView>
--->
+             </TextView>
+ -->
             <EditText
                 android:id="@+id/edit_MobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/forty"
                 android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
+                android:layout_marginRight="@dimen/twenty_five"
                 android:layout_marginBottom="@dimen/five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
-                android:hint="Mobile No"
-                android:maxLength="10"
                 android:fontFamily="@font/roboto_regular"
+                android:hint="Mobile No"
                 android:imeOptions="actionDone"
                 android:inputType="number"
+                android:maxLength="10"
                 android:paddingLeft="@dimen/fifteen"
                 android:textColor="@color/black"
                 android:textSize="@dimen/fifteen"
                 android:textStyle="normal" />
 
-          <!--  <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Email"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+            <!--  <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/twenty_five"
+                  android:fontFamily="@font/roboto_regular"
+                  android:text="Email"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/textsize">
 
-            </TextView>-->
+              </TextView>-->
 
-            <EditText
+           <!-- <EditText
                 android:id="@+id/edit_EmailId"
                 android:layout_width="match_parent"
-                 android:layout_height="@dimen/forty"
+                android:layout_height="@dimen/forty"
                 android:layout_below="@id/edit_MobileNumber"
                 android:layout_marginLeft="@dimen/twenty_five"
                 android:layout_marginTop="@dimen/five"
-                android:layout_marginBottom="@dimen/five"
                 android:layout_marginRight="@dimen/twenty_five"
+                android:layout_marginBottom="@dimen/five"
                 android:background="@drawable/button_back1"
                 android:ems="10"
-                android:hint="Email"
                 android:fontFamily="@font/roboto_regular"
+                android:hint="Email"
                 android:imeOptions="actionDone"
                 android:inputType="textEmailAddress"
                 android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
                 android:textSize="@dimen/fifteen"
-                android:textStyle="normal" />
-<!--
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Address"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+                android:textStyle="normal" />-->
 
-            </TextView>-->
+            <!--
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/twenty_five"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Address"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize">
+
+                        </TextView>-->
+
 
             <EditText
                 android:id="@+id/edit_Address"
                 android:layout_width="match_parent"
-                 android:layout_height="@dimen/forty"
-                android:layout_below="@id/edit_MobileNumber"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/five"
-                android:layout_marginBottom="@dimen/five"
-                android:layout_marginRight="@dimen/twenty_five"
-                android:background="@drawable/button_back1"
-                android:ems="10"
-                android:hint="Address"
+                android:layout_height="@dimen/hundred_fifty"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/box"
                 android:fontFamily="@font/roboto_regular"
-                android:imeOptions="actionDone"
-                android:inputType="text"
-                android:paddingLeft="@dimen/fifteen"
+                android:gravity="start"
+                android:hint="Enter Complete Address"
+                android:paddingLeft="20dp"
+                android:paddingTop="@dimen/ten"
                 android:textColor="#0C0C0C"
-                android:textSize="@dimen/fifteen"
-                android:textStyle="normal" />
-<!--
+                android:textSize="@dimen/textsize"/>
+            <!--
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="locality"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/twenty_five"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="locality"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize">
 
-            </TextView>
--->
+                        </TextView>
+            -->
 
-            <EditText
+            <!--<EditText
                 android:id="@+id/edit_locality"
                 android:layout_width="match_parent"
                  android:layout_height="@dimen/forty"
@@ -259,74 +258,74 @@
                 android:paddingLeft="@dimen/fifteen"
                 android:textColor="#0C0C0C"
                 android:textSize="@dimen/fifteen"
-                android:textStyle="normal" />
-<!--
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Landmark"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+                android:textStyle="normal" />-->
+            <!--
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/twenty_five"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Landmark"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize">
 
-            </TextView>-->
+                        </TextView>-->
 
-            <EditText
-                android:id="@+id/edit_landmark"
-                android:layout_width="match_parent"
-                 android:layout_height="@dimen/forty"
-                android:layout_below="@id/edit_MobileNumber"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/five"
-                android:layout_marginBottom="@dimen/five"
-                android:layout_marginRight="@dimen/twenty_five"
-                android:background="@drawable/button_back1"
-                android:ems="10"
-                android:hint="Landmark"
-                android:fontFamily="@font/roboto_regular"
-                android:imeOptions="actionDone"
-                android:inputType="text"
-                android:paddingLeft="@dimen/fifteen"
-                android:textColor="#0C0C0C"
-                android:textSize="@dimen/fifteen"
-                android:textStyle="normal" />
+            <!-- <EditText
+                 android:id="@+id/edit_landmark"
+                 android:layout_width="match_parent"
+                  android:layout_height="@dimen/forty"
+                 android:layout_below="@id/edit_MobileNumber"
+                 android:layout_marginLeft="@dimen/twenty_five"
+                 android:layout_marginTop="@dimen/five"
+                 android:layout_marginBottom="@dimen/five"
+                 android:layout_marginRight="@dimen/twenty_five"
+                 android:background="@drawable/button_back1"
+                 android:ems="10"
+                 android:hint="Landmark"
+                 android:fontFamily="@font/roboto_regular"
+                 android:imeOptions="actionDone"
+                 android:inputType="text"
+                 android:paddingLeft="@dimen/fifteen"
+                 android:textColor="#0C0C0C"
+                 android:textSize="@dimen/fifteen"
+                 android:textStyle="normal" />-->
 
-           <!-- <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:fontFamily="@font/roboto_regular"
-                android:text="State"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textsize">
+            <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/twenty_five"
+                 android:fontFamily="@font/roboto_regular"
+                 android:text="State"
+                 android:textColor="@color/black"
+                 android:textSize="@dimen/textsize">
 
-            </TextView>-->
+             </TextView>-->
 
-            <EditText
-                android:id="@+id/edit_State"
-                android:layout_width="match_parent"
-                 android:layout_height="@dimen/forty"
-                android:layout_below="@id/edit_MobileNumber"
-                android:layout_marginLeft="@dimen/twenty_five"
-                android:layout_marginTop="@dimen/five"
-                android:layout_marginBottom="@dimen/five"
-                android:layout_marginRight="@dimen/twenty_five"
-                android:background="@drawable/button_back1"
-                android:ems="10"
-                android:hint="State"
-                android:fontFamily="@font/roboto_regular"
-                android:imeOptions="actionDone"
-                android:inputType="text"
-                android:paddingLeft="@dimen/fifteen"
-                android:textColor="#0C0C0C"
-                android:textSize="@dimen/fifteen"
-                android:textStyle="normal" />
+            <!--  <EditText
+                  android:id="@+id/edit_State"
+                  android:layout_width="match_parent"
+                   android:layout_height="@dimen/forty"
+                  android:layout_below="@id/edit_MobileNumber"
+                  android:layout_marginLeft="@dimen/twenty_five"
+                  android:layout_marginTop="@dimen/five"
+                  android:layout_marginBottom="@dimen/five"
+                  android:layout_marginRight="@dimen/twenty_five"
+                  android:background="@drawable/button_back1"
+                  android:ems="10"
+                  android:hint="State"
+                  android:fontFamily="@font/roboto_regular"
+                  android:imeOptions="actionDone"
+                  android:inputType="text"
+                  android:paddingLeft="@dimen/fifteen"
+                  android:textColor="#0C0C0C"
+                  android:textSize="@dimen/fifteen"
+                  android:textStyle="normal" />-->
 
             <Button
                 android:id="@+id/btn_Submit"
                 android:layout_width="match_parent"
-                 android:layout_height="@dimen/forty"
+                android:layout_height="@dimen/forty"
                 android:layout_below="@+id/text_ForgotPassword"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"

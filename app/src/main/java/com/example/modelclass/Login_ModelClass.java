@@ -2,14 +2,13 @@ package com.example.modelclass;
 
 public class Login_ModelClass {
 
-    String userid,mobileNo,emailId,userName,password;
+    String userid,mobileNo,emailId,userName;
 
-    public Login_ModelClass(String userid, String mobileNo, String emailId, String userName, String password) {
+    public Login_ModelClass(String userid, String mobileNo, String emailId, String userName) {
         this.userid = userid;
         this.mobileNo = mobileNo;
         this.emailId = emailId;
         this.userName = userName;
-        this.password = password;
     }
 
     public String getUserid() {
@@ -44,11 +43,4 @@ public class Login_ModelClass {
         this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
